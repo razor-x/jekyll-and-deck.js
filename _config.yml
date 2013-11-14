@@ -1,0 +1,69 @@
+# Jekyll options.
+markdown: redcarpet
+pygments: true
+exclude:
+  - CHANGELOG.md
+  - LICENSE.txt
+  - README.md
+  - VERSION
+  - Gemfile.lock
+  - Gemfile
+  - Rakefile
+  - bower.json
+  - bower_components
+
+# Jekyll::AssetsPlugin options.
+assets:
+  sources:
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+    - bower_components
+  compress:
+    css: sass
+    js: uglifier
+
+# Use a cdn to load some libraries.
+cdn_enabled: true
+cdn:
+  # [ url, fallback test, local asset fallback path ]
+  libs:
+    - [ "//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", "!window.jQuery", "jquery/jquery.js" ]
+
+# Uncomment below and add your Tracking ID and URL to enable Google Analytics.
+# google_analytics:
+#   id: UA-00000000-0
+#   url: example.com
+
+# Uncomment below and add your Piwik URL to enable Piwik.
+# piwik: example.com/piwik/
+
+# Uncomment below to configure social media.
+# social:
+#   facebook:
+#     enabled: true
+#   google:
+#     enabled: true
+#     gcfg:
+#       lang: en-US
+#       parsetags: onload
+#   twitter:
+#     enabled: true
+
+# Uncomment below to enable deploy.
+# :deploy:
+#   # only :rsync supported
+#   :protocol: :rsync
+#   # domain name
+#   :server: example.com
+#   # remote username
+#   :user: www
+#   # remote port
+#   :port: 22
+#   # path to remote folder where contents of _site should go
+#   # must have trailing slash
+#   :path: /var/www/example.com/htdocs/
+#   # site files and folders that should be uploaded but not synced
+#   # remote content will not be removed from these files and folders
+#   :upload_only:
+#     - content/

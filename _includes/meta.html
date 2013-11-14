@@ -1,0 +1,61 @@
+{% assign meta = site.data.meta %}
+{% if meta.title %}
+  <title>{{ meta.title }}</title>
+  <meta property="og:title" content="{{ meta.title }}" />
+{% endif %}
+
+{% if meta.description %}
+  <meta name="description" content="{{ meta.description }}" />
+  <meta property="og:description" content="{{ meta.description }}" />
+{% endif %}
+
+{% if meta.url %}
+  <link rel="canonical" href="{{ meta.url }}" />
+  <meta property="og:url" content="{{ meta.url }}" />
+{% endif %}
+
+{% if meta.site_name %}
+  <meta property="og:site_name" content="{{ meta.site_name }}" />
+{% endif %}
+
+<meta property="og:updated_time" content="{{ site.time | date_to_xmlschema }}" />
+
+{% if meta.locale %}
+  <meta property="og:locale" content="{{ meta.locale }}" />
+{% endif %}
+
+{% if meta.determiner %}
+  <meta property="og:determiner" content="{{ meta.determiner }}" />
+{% endif %}
+
+{% if meta.keywords %}
+  <meta property="keywords" content="{{ meta.keywords | join: ',' }}" />
+{% endif %}
+
+{% if meta.image %}
+  <meta property="og:image" content="{{ meta.image }}" />
+{% endif %}
+
+{% if meta.audio %}
+  <meta property="og:audio" content="{{ meta.audio }}" />
+{% endif %}
+
+{% if meta.video %}
+  <meta property="og:video" content="{{ meta.video }}" />
+{% endif %}
+
+{% if meta.type %}
+  <meta property="og:type" content="{{ meta.type }}" />
+{% endif %}
+
+{% if meta.twitter.card %}
+  <meta name="twitter:card" content="{{ meta.twitter.card }}" />
+{% endif %}
+
+{% if meta.twitter.site %}
+  <meta name="twitter:site" content="{{ meta.twitter.site }}" />
+{% endif %}
+
+{% if meta.twitter.creator %}
+  <meta name="twitter:creator" content="{{ meta.twitter.creator }}" />
+{% endif %}

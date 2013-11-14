@@ -1,0 +1,19 @@
+# This meta data should be filled out.
+title: Deck title
+description: Deck description
+keywords: [deck.js, talk]
+locale: en_US
+site_name: Site name
+url: http://example.com/my_deck/
+
+# This meta data is optional.
+# determiner: null
+# image: http://example.com/my_deck/preview.png
+# audio: http://example.com/my_deck/talk.mp3
+# video: http://example.com/my_deck/talk.mpg
+# type: website
+#
+# twitter:
+#   card: summary
+#   site: "@example.com"
+#   creator: "@username"
