@@ -8,7 +8,7 @@ Source for your deck running on Jekyll and deck.js.
 Just clone and deck.
 
 - Create your [deck.js](http://imakewebthings.com/deck.js/) deck with [Jekyll](http://jekyllrb.com/).
-- Write your deck with HAML.
+- Write your deck with [Haml](http://haml.info/).
 - MathJax ready: just set `mathjax: true` in `_config.yml`.
 - Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 - Bower for asset dependency management.
