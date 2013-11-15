@@ -1,2 +1,5 @@
+local: true
+
+cdn_enabled: false
 google_analytics: false
 piwik: false

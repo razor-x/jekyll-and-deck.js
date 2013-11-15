@@ -1,3 +1,5 @@
+dev: true
+
 assets:
   sources:
     - _assets/images

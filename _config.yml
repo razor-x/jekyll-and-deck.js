@@ -12,6 +12,12 @@ exclude:
   - bower.json
   - bower_components
 
+gems:
+  - jekyll-haml
+  - jekyll-assets
+  - sass
+  - coffee_script
+
 # Jekyll::AssetsPlugin options.
 assets:
   sources:
@@ -22,6 +28,9 @@ assets:
   compress:
     css: sass
     js: uglifier
+
+# Set to true to load MathJax.
+mathjax: false
 
 # Use a cdn to load some libraries.
 cdn_enabled: true

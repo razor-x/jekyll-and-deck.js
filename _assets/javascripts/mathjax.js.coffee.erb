@@ -1,0 +1,21 @@
+# Any MathJax related configuation should be added to this file
+
+config = 'TeX-AMS-MML_HTMLorMML'
+
+# Put code that needs to run before MathJax is loaded above this
+<% if site.config['local'] %>
+Modernizr.load
+  load: "MathJax/MathJax.js?config=#{config}"
+  complete: ->
+    if window.MathJax then initMathJax()
+<% else %>
+Modernizr.load
+  load: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=#{config}"
+  complete: ->
+    if !window.MathJax
+      Modernizr.load "MathJax/MathJax.js?config=#{config}"
+    if window.MathJax then initMathJax()
+<% end %>
+
+# Put code that needs to run after MathJax is loaded in this function
+initMathJax = ->

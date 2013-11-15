@@ -2,5 +2,8 @@
 # Add deck extensions from deck.js/extensions
 #= require deck.js/core/deck.core
 
+# Load MathJax if enabled
+<%= if site.config['mathjax'] then require_asset 'mathjax' end %>
+
 # Initialize the deck.
 $.deck '.slide'

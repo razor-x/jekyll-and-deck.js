@@ -6,11 +6,11 @@ require 'fileutils'
 # Load the configuration file
 config = YAML.load_file '_config.yml'
 
-testing_config = '_config.yml,_config.testing.yml'
+local_config = '_config.yml,_config.local.yml'
 dev_config = '_config.yml,_config.dev.yml'
 
-# Set "rake test" as default task
-task :default => :test
+# Set "rake build" as default task
+task :default => :build
 
 # Spawn a server and kill it gracefully when interrupt is received
 def spawn *cmd
@@ -25,19 +25,22 @@ def spawn *cmd
 end
 
 # rake build
-desc 'Generate the site'
+desc 'Generate the deck.'
 task :build do
   system 'jekyll', 'build'
 end
 
-# rake test
-desc 'Generate the site and start a server (no auto generate).'
-task :test do
-  spawn 'jekyll', 'serve', '--config', testing_config
+# rake deck
+desc 'Generate the deck and start a server (for presenting locally).' + "\n" +
+     'Load local resources to work offline, no auto generate.' + "\n" +
+     'Loads _config.local.yml as an additional config file.'
+task :deck do
+  spawn 'jekyll', 'serve', '--config', local_config
 end
 
 # rake dev
-desc 'Start a server and watch the site for changes.' + "\n" +
+desc 'Start a server and watch the deck for changes (for development).' + "\n" +
+     'For performance, use MathJax CDN only (if enabled).' + "\n" +
      'Loads _config.dev.yml as an additional config file.'
 task :dev do
   spawn 'jekyll', 'serve', '--watch', '--config', dev_config
