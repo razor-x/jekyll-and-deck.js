@@ -4,14 +4,16 @@
 [![Build Status](https://travis-ci.org/razor-x/jekyll-and-deck.js.png?branch=master)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/razor-x/jekyll-and-deck.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-Source for your deck blog running on Jekyll and deck.js.
+Source for your deck running on Jekyll and deck.js.
 Just clone and deck.
 
 - Create your [deck.js](http://imakewebthings.com/deck.js/) deck with [Jekyll](http://jekyllrb.com/).
+- Write your deck with HAML.
+- MathJax ready: just set `mathjax: true` in `_config.yml`.
 - Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 - Bower for asset dependency management.
-- Basic [Rake](https://github.com/jimweirich/rake) tasks with support for dev and testing modes, run `rake -D` for info.
-- Meta data system for SEO.
+- Basic [Rake](https://github.com/jimweirich/rake) tasks with support for dev and offline mode, run `rake -D` for info.
+- Meta data system for SEO and social media: see `_data/meta.yml`.
 - [Google Analytics](http://www.google.com/analytics/) ready: see `google_analytics` variable in `_config.yml`.
 - [Piwik](https://piwik.org/) ready: set `piwik: yoursite.com/piwik/` in `_config.yml` (yoursite.com/piwik/ points to the piwik install root).
 
@@ -19,7 +21,7 @@ Just clone and deck.
 
 Just clone this with
 
-    git clone https://github.com/razor-x/jekyll-and-deck.js.git my_blog
+    git clone https://github.com/razor-x/jekyll-and-deck.js.git my_deck
 
 run `bundle && bower install` and make your deck in `index.haml`.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) and [deck.js docs](http://imakewebthings.com/deck.js/docs/) for the rest of the details.
@@ -46,7 +48,7 @@ which you can then merge into your other branches.
 The `Gemfile` is using pessimistic version constraints for everything,
 so if you want major updates, you need to bump the versions yourself.
 
-JavaScript library versions need to be updated in `bower.json` and `_config.yml`.
+JavaScript library versions need to be updated in `bower.json` and `_config.yml` (for CDN).
 
 ## License
 
