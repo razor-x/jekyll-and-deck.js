@@ -1,7 +1,7 @@
 # Jekyll & deck.js
 
 [![Dependency Status](https://gemnasium.com/razor-x/jekyll-and-deck.js.png)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
-[![Build Status](https://travis-ci.org/razor-x/jekyll-and-deck.js.png?branch=master)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+[![Build Status](https://travis-ci.org/razor-x/jekyll-and-deck.js.png?branch=example)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/razor-x/jekyll-and-deck.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Source for your deck running on Jekyll and deck.js.
