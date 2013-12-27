@@ -1,11 +1,7 @@
 dev: true
 
 assets:
-  sources:
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-    - bower_components
+  baseurl: /assets/
   cache: true
   compress:
     css: null
