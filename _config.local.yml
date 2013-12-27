@@ -1,5 +1,7 @@
 local: true
 
+domain: null
+
 assets:
   baseurl: /assets/
 

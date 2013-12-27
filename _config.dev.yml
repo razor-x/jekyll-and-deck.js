@@ -1,5 +1,7 @@
 dev: true
 
+domain: null
+
 assets:
   baseurl: /assets/
   cachebust: none
