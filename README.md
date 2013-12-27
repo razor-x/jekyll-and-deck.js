@@ -19,9 +19,13 @@ Just clone and deck.
 
 ## Quick start
 
+You will need [Ruby Bundler](http://bundler.io/) and [Bower](http://bower.io/).
+
 Just clone this with
 
-    git clone https://github.com/razor-x/jekyll-and-deck.js.git my_deck
+````bash
+$ git clone https://github.com/razor-x/jekyll-and-deck.js.git my-deck
+````
 
 run `bundle && bower install` and make your deck in `index.haml`.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) and [deck.js docs](http://imakewebthings.com/deck.js/docs/) for the rest of the details.
@@ -31,17 +35,29 @@ Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) and [deck.js docs
 If you want to merge in future updates from this project and have your own origin,
 set up a separate branch to track this.
 
-    git remote rename origin razorx-jekyll-and-deck.js
-    git branch jekyll-and-deck.js
-    git branch -u razorx-jekyll-and-deck.js/master jekyll-and-deck.js
+````bash
+$ git remote rename origin razor-x-jekyll-and-deck.js
+$ git branch jekyll-and-deck.js
+$ git branch -u razor-x-jekyll-and-deck.js/master jekyll-and-deck.js
+````
 
 Then add an origin and push master
 
-    git remote add origin git@github.com:username/username-deck.git
-    git push -u origin master
+````bash
+$ git remote add origin git@github.com:username/my-deck.git
+$ git push -u origin master
+````
 
 Now, the `jekyll-and-deck.js` branch will pull changes from this project,
 which you can then merge into your other branches.
+
+If you later clone your repo you will need to create the update branch again.
+
+````bash
+$ git remote add razor-x-jekyll-and-deck.js https://github.com/razor-x/jekyll-and-deck.js.git
+$ git fetch razor-x-jekyll-and-deck.js
+$ git checkout -b jekyll-and-deck.js razor-x-jekyll-and-deck.js/master
+````
 
 ## Updating
 
