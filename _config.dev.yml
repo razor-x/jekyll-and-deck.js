@@ -1,6 +1,6 @@
 dev: true
 
-domain: null
+baseurl: null
 
 assets:
   baseurl: /assets/
