@@ -7,6 +7,10 @@
 Source for your deck running on Jekyll and deck.js.
 Just clone and deck.
 
+Demo at [io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyll-and-deck.js/).
+
+Lots of baked in features.
+
 - Create your [deck.js](http://imakewebthings.com/deck.js/) deck with [Jekyll](http://jekyllrb.com/).
 - Automatically publish to [GitHub pages](http://pages.github.com/) with [Travis CI](https://travis-ci.org/).
 - Write your deck with [Haml](http://haml.info/).
@@ -42,7 +46,7 @@ The `example` branch is a full deck that will contain
 real examples and documentation for the included features.
 That branch is automatically built and published by Travis CI.
 
-[Examples deck hosted on GitHub pages.](http://razor-x.github.io/jekyll-and-deck.js/)
+Examples deck hosted on GitHub pages: [io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyll-and-deck.js/).
 
 ## Add future update support
 
