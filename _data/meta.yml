@@ -12,7 +12,7 @@ site_name: Site name
 # video: http://io.evansosenko.com/jekyll-and-deck.js/talk.mpg
 # type: website
 #
-# twitter:
-#   card: summary
-#   site: "@username"
-#   creator: "@username"
+twitter:
+  card: summary
+  site: "@evansosenko"
+  creator: "@evansosenko"
