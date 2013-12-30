@@ -89,7 +89,7 @@ First, make a `gh-pages` branch unless you are using `master` as discussed above
 ````bash
 $ git checkout --orphan gh-pages
 ````
-then make an initial commit, push it, and make sure goes live online.
+then make an initial commit, push it, and make sure it goes live online.
 ````bash
 $ echo "GitHub Pages placeholder" > index.html
 $ git add index.html
