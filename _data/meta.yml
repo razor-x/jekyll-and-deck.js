@@ -4,13 +4,12 @@ description: Deck description
 keywords: [deck.js, talk]
 locale: en_US
 site_name: Site name
-url: http://example.com/my_deck/
 
 # This meta data is optional.
 # determiner: null
-# image: http://example.com/my_deck/preview.png
-# audio: http://example.com/my_deck/talk.mp3
-# video: http://example.com/my_deck/talk.mpg
+# image: http://razor-x.github.io/jekyll-and-deck.js/preview.png
+# audio: http://razor-x.github.io/jekyll-and-deck.js/talk.mp3
+# video: http://razor-x.github.io/jekyll-and-deck.js/talk.mpg
 # type: website
 #
 # twitter:
