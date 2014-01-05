@@ -1,7 +1,7 @@
 # Jekyll & deck.js
 
 [![Dependency Status](https://gemnasium.com/razor-x/jekyll-and-deck.js.png)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
-[![Build Status](https://travis-ci.org/razor-x/jekyll-and-deck.js.png?branch=example)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+[![Build Status](https://travis-ci.org/razor-x/jekyll-and-deck.js.png?branch=demo)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/razor-x/jekyll-and-deck.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Source for your deck running on Jekyll and deck.js.
@@ -52,18 +52,19 @@ $ git clone https://github.com/razor-x/jekyll-and-deck.js.git my-deck
 run `bundle && bower install` and make your deck in `index.haml`.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) and [deck.js docs](http://imakewebthings.com/deck.js/docs/) for the rest of the details.
 
-## Example site and documentation
+## Demo site and documentation
 
 The `master` branch of this project is designed to be used
 as a starting point for your deck and as a branch to pull updates from.
 Thus, most features are disabled by default,
 and only a minimal deck has been created.
 
-The `example` branch is a full deck that will contain
+The `demo` branch is a full deck that will contain
 real examples and documentation for the included features.
 That branch is automatically built and published by Travis CI.
 
-Examples deck hosted on GitHub pages: [io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyll-and-deck.js/).
+Demo deck hosted on GitHub pages:
+[io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyll-and-deck.js/).
 
 ## Add future update support
 
