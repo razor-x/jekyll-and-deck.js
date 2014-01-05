@@ -1,5 +1,4 @@
 module Jekyll
-
   class MathJaxGenerator < Generator
     safe true
 
@@ -21,5 +20,4 @@ module Jekyll
       end
     end
   end
-
 end
