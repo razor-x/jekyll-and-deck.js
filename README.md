@@ -13,7 +13,7 @@ Lots of baked in features.
 
 - Create your [deck.js](http://imakewebthings.com/deck.js/) deck with [Jekyll](http://jekyllrb.com/).
 - Automatically publish to [GitHub pages](http://pages.github.com/) with [Travis CI](https://travis-ci.org/).
-- Write your deck with [Haml](http://haml.info/).
+- Write your deck with [Markdown](http://daringfireball.net/projects/markdown/).
 - MathJax ready: just set `mathjax: true` in `_config.yml`.
 - Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 - Bower for asset dependency management.

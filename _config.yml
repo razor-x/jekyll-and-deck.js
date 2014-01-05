@@ -15,7 +15,6 @@ exclude:
   - bower_components
 
 gems:
-  - jekyll-haml
   - jekyll-assets
   - sass
   - coffee_script
@@ -31,6 +30,10 @@ assets:
   compress:
     css: sass
     js: uglifier
+
+# Default html tag to use for slides.
+# Override per slide with {% slide tagname %}
+slide_tag: section
 
 # Set to true to load MathJax.
 mathjax: false
