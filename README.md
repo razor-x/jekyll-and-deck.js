@@ -11,16 +11,33 @@ Demo at [io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyl
 
 Lots of baked in features.
 
-- Create your [deck.js](http://imakewebthings.com/deck.js/) deck with [Jekyll](http://jekyllrb.com/).
-- Automatically publish to [GitHub pages](http://pages.github.com/) with [Travis CI](https://travis-ci.org/).
-- Write your deck with [Haml](http://haml.info/).
-- MathJax ready: just set `mathjax: true` in `_config.yml`.
-- Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
-- Bower for asset dependency management.
-- Basic [Rake](https://github.com/jimweirich/rake) tasks with support for dev and offline mode, run `rake -D` for info.
-- Meta data system for SEO and social media: see `_data/meta.yml`.
-- [Google Analytics](http://www.google.com/analytics/) ready: see `google_analytics` variable in `_config.yml`.
-- [Piwik](https://piwik.org/) ready: set `piwik: yoursite.com/piwik/` in `_config.yml` (yoursite.com/piwik/ points to the piwik install root).
+### Create your [deck.js](http://imakewebthings.com/deck.js/) deck with [Jekyll](http://jekyllrb.com/).
+
+  * Basic [Rake](https://github.com/jimweirich/rake) tasks with support
+    for dev and testing modes, run `rake -D` for info.
+  * Automatically publish to [GitHub pages](http://pages.github.com/)
+    with [Travis CI](https://travis-ci.org/).
+  * Write your deck with [Markdown](http://daringfireball.net/projects/markdown/).
+
+### Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
+
+  * [Bower](http://bower.io/) for asset dependency management.
+
+### Modern web libraries and patterns.
+
+  * [MathJax](http://www.mathjax.org/) ready:
+    just set `mathjax: true` in `_config.yml`.
+  * Meta data system for SEO and social media:
+    see `_data/meta.yml`.
+
+### Analytics and social features.
+
+  * Social media button support.
+  * [Google Analytics](http://www.google.com/analytics/) ready:
+    see `google_analytics` variable in `_config.yml`.
+  * [Piwik](https://piwik.org/) ready:
+    set `piwik: yoursite.com/piwik/` in `_config.yml`
+    (yoursite.com/piwik/ points to the piwik install root).
 
 ## Quick start
 
