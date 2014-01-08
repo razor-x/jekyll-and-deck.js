@@ -20,7 +20,7 @@ title: Deck Title
 ## Final slide
 <p>
   <a href='http://www.w3.org/html/logo/'>
-    <img alt='HTML5 Powered with CSS3 / Styling, and Semantics' height='64' src='http://io.evansosenko.com/jekyll-and-deck.js/assets/html5-badge-h-css3-semantics-8984c1445cb122441ac58bf5bb95be49.png' title='HTML5 Powered with CSS3 / Styling, and Semantics' width='165'>
+    <img alt='HTML5 Powered with CSS3 / Styling, and Semantics' height='64' src='{% asset_path html5-badge-h-css3-semantics.png %}' title='HTML5 Powered with CSS3 / Styling, and Semantics' width='165'>
   </a>
 </p>
 {% if site.social %}{% include social.html %}{% endif %}
