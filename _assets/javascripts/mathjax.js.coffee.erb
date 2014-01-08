@@ -10,7 +10,7 @@ Modernizr.load
     if window.MathJax then initMathJax()
 <% else %>
 Modernizr.load
-  load: "//cdn.mathjax.org/mathjax/latest/MathJax.js?config=#{config}"
+  load: "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=#{config}"
   complete: ->
     if !window.MathJax
       Modernizr.load "MathJax/MathJax.js?config=#{config}"
