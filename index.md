@@ -11,7 +11,7 @@ title: Deck Title
 
 ## Body
 
-{% endslide %}{% slide %}
+{% endslide %}{% slide.my-class %}
 
 ## More body
 
