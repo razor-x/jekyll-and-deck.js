@@ -3,6 +3,7 @@ require 'fileutils'
 require 'rake'
 require 'tmpdir'
 require 'yaml'
+require 'zip'
 
 # Load the configuration file
 config = YAML.load_file '_config.yml'
@@ -39,6 +40,21 @@ end
 desc 'Generate the deck for portable static offline viewing.'
 task :static do
   system 'bundle', 'exec', 'jekyll', 'build', '--config', static_config
+end
+
+# rake zip
+desc 'Generate a portable zip of the deck for static offline viewing.'
+task :zip => [:static] do
+  title = YAML.load_file(File.join('_data', 'meta.yml'))['title']
+  title = "deck-#{title.gsub(' ', '_').downcase}"
+  zip = "#{title}.zip"
+
+  File.unlink zip if File.exists? zip
+  Zip::File.open zip, Zip::File::CREATE do |zipfile|
+    Dir[File.join(destination, '**', '**')].each do |file|
+      zipfile.add(file.sub(destination, File.join(title, '/')), file)
+    end
+  end
 end
 
 # rake deck

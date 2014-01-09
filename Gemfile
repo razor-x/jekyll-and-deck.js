@@ -4,6 +4,7 @@ ruby '2.0.0'
 # Development dependencies
 gem 'rake', '~> 10.1.0'
 gem 'bump', '~> 0.5.0'
+gem 'rubyzip', '~> 1.1.0'
 
 # Jekyll
 gem 'jekyll', '~> 1.4.1'
