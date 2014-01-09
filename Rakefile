@@ -8,6 +8,7 @@ require 'yaml'
 config = YAML.load_file '_config.yml'
 
 local_config = '_config.yml,_config.local.yml'
+static_config = '_config.yml,_config.static.yml'
 dev_config = '_config.yml,_config.dev.yml'
 
 config[:destination] ||= '_site/'
@@ -31,6 +32,12 @@ end
 desc 'Generate the deck.'
 task :build do
   system 'bundle', 'exec', 'jekyll', 'build'
+end
+
+# rake static
+desc 'Generate the deck for portable static offline viewing.'
+task :static do
+  system 'bundle', 'exec', 'jekyll', 'build', '--config', static_config
 end
 
 # rake deck
