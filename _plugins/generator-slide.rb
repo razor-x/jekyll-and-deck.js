@@ -2,7 +2,12 @@ module Jekyll
   class RenderSlideTag < Liquid::Block
     def initialize(tag_name, markup, tokens)
       super
-      @slide_tag = markup.strip.split(' ').first
+      markup = markup.strip.split(' ').first
+      args = markup.nil? ? [] : markup.split('.')
+
+      @slide_tag = args.shift
+      @slide_tag = nil if @slide_tag == ''
+      @classes = args
     end
 
     def render(context)
@@ -10,8 +15,10 @@ module Jekyll
       default_slide_tag ||= 'section'
       @slide_tag ||= default_slide_tag
 
+      classes = @classes.empty? ? '' : " #{@classes.join(' ')}"
+
       result = ''
-      result << %Q{<#{@slide_tag} class="slide">}
+      result << %Q{<#{@slide_tag} class="slide#{classes}">}
       result << super
       result << %Q{</#{@slide_tag}>}
     end

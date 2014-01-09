@@ -45,6 +45,7 @@ cdn:
   # [ url, fallback test, local asset fallback path ]
   libs:
     - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js", "!window.jQuery", "jquery/jquery.js" ]
+    - [ "https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js", "!window.WebFont", " webfontloader-min/webfont.js" ]
 
 # Uncomment below and add your Tracking ID and URL to enable Google Analytics.
 # google_analytics:
