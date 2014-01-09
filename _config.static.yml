@@ -1,0 +1,10 @@
+local: true
+
+baseurl: null
+
+assets:
+  baseurl: assets/
+
+cdn_enabled: false
+google_analytics: false
+piwik: false

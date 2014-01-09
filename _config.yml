@@ -13,6 +13,7 @@ exclude:
   - Rakefile
   - bower.json
   - bower_components
+  - deck-*.zip
 
 gems:
   - jekyll-assets

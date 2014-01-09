@@ -3,14 +3,17 @@ require 'fileutils'
 require 'rake'
 require 'tmpdir'
 require 'yaml'
+require 'zip'
 
 # Load the configuration file
 config = YAML.load_file '_config.yml'
 
 local_config = '_config.yml,_config.local.yml'
+static_config = '_config.yml,_config.static.yml'
 dev_config = '_config.yml,_config.dev.yml'
 
 config[:destination] ||= '_site/'
+destination = File.join config[:destination], '/'
 
 # Set "rake build" as default task
 task :default => :build
@@ -31,6 +34,27 @@ end
 desc 'Generate the deck.'
 task :build do
   system 'bundle', 'exec', 'jekyll', 'build'
+end
+
+# rake static
+desc 'Generate the deck for portable static offline viewing.'
+task :static do
+  system 'bundle', 'exec', 'jekyll', 'build', '--config', static_config
+end
+
+# rake zip
+desc 'Generate a portable zip of the deck for static offline viewing.'
+task :zip => [:static] do
+  title = YAML.load_file(File.join('_data', 'meta.yml'))['title']
+  title = "deck-#{title.gsub(' ', '_').downcase}"
+  zip = "#{title}.zip"
+
+  File.unlink zip if File.exists? zip
+  Zip::File.open zip, Zip::File::CREATE do |zipfile|
+    Dir[File.join(destination, '**', '**')].each do |file|
+      zipfile.add(file.sub(destination, File.join(title, '/')), file)
+    end
+  end
 end
 
 # rake deck
@@ -54,7 +78,7 @@ desc 'Deploy the site using rsync.'
 task :deploy => :build do
   raise '>> error: must add :depoly: section to _config.yml.' if config[:deploy].nil?
 
-  local = File.expand_path '_site/'
+  local = File.expand_path destination
   protocol = config[:deploy][:protocol]
   server = config[:deploy][:server]
   user = config[:deploy][:user]
@@ -90,7 +114,6 @@ desc 'Generate site and publish to GitHub Pages.'
 task :ghpages do
   repo = %x(git config remote.origin.url).strip
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
-  destination = File.join config[:destination], '/'
   rev = %x(git rev-parse HEAD).strip
 
   system 'bundle update'
@@ -124,7 +147,6 @@ task :travis do
   repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:').strip
   deploy_url = repo.gsub %r{https://}, "https://#{ENV['GH_TOKEN']}@"
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
-  destination = File.join config[:destination], '/'
   rev = %x(git rev-parse HEAD).strip
 
   system "git remote add deploy #{repo}"
