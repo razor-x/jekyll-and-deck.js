@@ -22,9 +22,13 @@ Lots of baked in features.
 ### Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 
   * [Bower](http://bower.io/) for asset dependency management.
+  * [Sass](http://sass-lang.com/), [CoffeeScript](http://coffeescript.org/).
 
 ### Modern web libraries and patterns.
 
+  * Syntax highlighting with [highlight.js](http://highlightjs.org/).
+  * Load fonts with [Web Font Loader](https://github.com/typekit/webfontloader).
+  * Load JavaScript asynchronously with [Modernizr.load](http://modernizr.com/docs/#load).
   * [MathJax](http://www.mathjax.org/) ready:
     just set `mathjax: true` in `_config.yml`.
   * Meta data system for SEO and social media:
