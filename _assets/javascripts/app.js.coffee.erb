@@ -1,9 +1,13 @@
-# Add JavaScript required for your deck
-# Add deck extensions from deck.js/extensions
+# Add JavaScript required for your deck.
+# Add deck extensions from deck.js/extensions.
+#= require highlightjs
 #= require deck.js/core/deck.core
 
-# Load MathJax if enabled
-<%= if site.config['mathjax'] then require_asset 'mathjax' end %>
+# Load MathJax if enabled.
+<% if site.config['mathjax'] then require_asset 'mathjax' end %>
 
 # Initialize the deck.
 $.deck '.slide'
+
+# Invoke highlight.js on page load.
+$ -> hljs.initHighlighting()

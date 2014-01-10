@@ -26,6 +26,7 @@ Lots of baked in features.
 
 ### Modern web libraries and patterns.
 
+  * Syntax highlighting with [highlight.js](http://highlightjs.org/).
   * Load fonts with [Web Font Loader](https://github.com/typekit/webfontloader).
   * Load JavaScript asynchronously with [Modernizr.load](http://modernizr.com/docs/#load).
   * [MathJax](http://www.mathjax.org/) ready:
