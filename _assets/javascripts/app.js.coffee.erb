@@ -3,6 +3,12 @@
 #= require highlightjs
 #= require deck.js/core/deck.core
 
+$(document).bind 'deck.init', ->
+  # Show social buttons after deck is loaded.
+  <% if site.config['social'] %>
+  $('aside.social-buttons').show()
+  <% end %>
+
 # Load MathJax if enabled.
 <% if site.config['mathjax'] then require_asset 'mathjax' end %>
 

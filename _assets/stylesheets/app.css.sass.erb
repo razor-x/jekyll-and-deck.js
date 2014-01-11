@@ -7,7 +7,13 @@
 //= require deck.js/themes/transition/fade
 //= require deck.js/themes/style/web-2.0
 
+<% if site.config['social'] %>
 // Fix Twitter button positioning.
 iframe.twitter-share-button
   display: inline-block
   margin: 0
+
+// Hide social buttons until deck is loaded.
+aside.social-buttons
+  display: none
+<% end %>
