@@ -2,6 +2,7 @@
   "name": "Jekyll & Deck",
   "version": "0.0.1",
   "dependencies": {
+    "css-spinners": "1.0.1",
     "MathJax": "latest",
     "webfontloader-min": "1.5.1",
     "highlightjs": "7.5.0",
