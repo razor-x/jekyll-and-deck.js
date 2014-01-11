@@ -5,7 +5,6 @@
 
 $(document).bind 'deck.init', ->
   # Show social buttons after deck is loaded.
-  $('#deck-loading_screen').hide()
   <% if site.config['social'] %>
   $('aside.social-buttons').show()
   <% end %>
