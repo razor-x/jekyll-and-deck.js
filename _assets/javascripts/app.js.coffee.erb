@@ -6,7 +6,9 @@
 $(document).bind 'deck.init', ->
   # Show social buttons after deck is loaded.
   <% if site.config['social'] %>
-  $('aside.social-buttons').show()
+  $('aside.social-buttons').hide().css('visibility', 'visible').fadeIn()
+  $('div.g-plus-container iframe').each ->
+    @style.setProperty 'visibility', 'visible', 'important'
   <% end %>
 
 # Load MathJax if enabled.
