@@ -6,7 +6,13 @@
 $(document).bind 'deck.init', ->
   # Show social buttons after deck is loaded.
   <% if site.config['social'] %>
-  $('aside.social-buttons').show()
+  $('aside.social-buttons').hide().css('visibility', 'visible').fadeIn()
+  showGooglePlus = -> $('div.g-plus-container iframe').each ->
+    @style.setProperty 'visibility', 'visible', 'important'
+  showGooglePlus
+  # If the Google +1 button loads after the fist time showGooglePlus runs,
+  # run it again some time later to make sure it appears.
+  $ -> setTimeout showGooglePlus, 7000
   <% end %>
 
 # Load MathJax if enabled.
