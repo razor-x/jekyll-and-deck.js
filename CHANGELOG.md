@@ -8,6 +8,7 @@
 - Switched to highlight.js.
 - Use `rake static` and `rake zip` to build a
   deck for portable static offline viewing.
+- Added deck remote control using Firebase.
 
 ## 0.0.1
 

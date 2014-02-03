@@ -5,6 +5,11 @@ title: Deck Title
 
 {% slide header %}
 
+<div style="text-align:center">
+  <button id="auth-login" style="display:none">login</button>
+  <button id="auth-logout" style="display:none">logout</button>
+</div>
+
 # {{ page.title }}
 
 {% endslide %}{% slide %}

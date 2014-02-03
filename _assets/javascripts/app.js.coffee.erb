@@ -18,6 +18,9 @@ $(document).bind 'deck.init', ->
 # Load MathJax if enabled.
 <% if site.config['mathjax'] then require_asset 'mathjax' end %>
 
+# Load firebase remote if enabled.
+<% if site.config['firebase'] then require_asset 'remote' end %>
+
 # Initialize the deck.
 $.deck '.slide'
 
