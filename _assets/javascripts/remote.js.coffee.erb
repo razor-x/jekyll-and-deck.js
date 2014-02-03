@@ -1,12 +1,15 @@
 #= require firebase
 #= require firebase-simple-login
 
-ref = new Firebase "<%= site.config['firebase'] %>"
-
 params = window.location.search.substring(1).split("&")
   .map (el) -> el.split "="
 
-if params[0][0] is 'broadcast'
+behavior = params[0][0]
+
+if behavior in ['broadcast', 'follow']
+  ref = new Firebase "<%= site.config['firebase'] %>"
+
+if behavior is 'broadcast'
   logoutBtn = $('#auth-logout')
   loginBtn = $('#auth-login')
 
@@ -24,6 +27,6 @@ if params[0][0] is 'broadcast'
   $(document).bind 'deck.change', (event, from, to) ->
     ref.set {'slide': to}
 
-else if params[0][0] is 'follow'
+else if behavior is 'follow'
   ref.child 'slide'
   .on 'value', (value) -> $.deck('go', value.val())
