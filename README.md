@@ -46,7 +46,7 @@ Lots of baked in features.
 
 ## Quick start
 
-You will need [Ruby Bundler](http://bundler.io/) and [Bower](http://bower.io/).
+You will need Ruby ≥ 2 with [Bundler](http://bundler.io/) and [Bower](http://bower.io/).
 
 Just clone this with
 
