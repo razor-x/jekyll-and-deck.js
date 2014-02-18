@@ -8,8 +8,8 @@
     "MathJax": "latest",
     "webfontloader-min": "1.5.1",
     "highlightjs": "7.5.0",
-    "jquery": "2.0.3",
     "normalize-css": "3.0.0",
+    "jquery": "2.1.0",
     "deck.js": "latest"
   }
 }

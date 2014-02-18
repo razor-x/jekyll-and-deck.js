@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- jQuery to 2.1.0.
 - Normalize.css to 3.0.0.
 
 ## 0.0.2
