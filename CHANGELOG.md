@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.0.3
 
 - jQuery to 2.1.0.
 - Normalize.css to 3.0.0.
