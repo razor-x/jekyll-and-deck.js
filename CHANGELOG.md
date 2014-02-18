@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.0.4
 
 - Bumped highlightjs to 8.0.
 
