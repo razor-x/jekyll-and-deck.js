@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.0.2
 
 - Automatically publish to GitHub pages with Travis CI.
 - Use Markdown for slides, not haml.
