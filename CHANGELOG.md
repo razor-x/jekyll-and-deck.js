@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Bumped highlightjs to 8.0.
+
 ## 0.0.3
 
 - jQuery to 2.1.0.
