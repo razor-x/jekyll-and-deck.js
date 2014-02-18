@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Normalize.css to 3.0.0.
+
 ## 0.0.2
 
 - Automatically publish to GitHub pages with Travis CI.
