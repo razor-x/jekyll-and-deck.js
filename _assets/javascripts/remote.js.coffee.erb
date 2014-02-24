@@ -28,6 +28,6 @@ if behavior is 'broadcast'
     ref.set {'slide': to}
 
 else if behavior is 'follow'
-  $('.note-link').hide()
+  $('.notes-link').hide()
   ref.child 'slide'
   .on 'value', (value) -> $.deck('go', value.val())
