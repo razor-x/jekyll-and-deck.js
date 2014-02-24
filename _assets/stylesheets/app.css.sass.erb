@@ -8,6 +8,12 @@
 //= require deck.js/themes/transition/fade
 //= require deck.js/themes/style/web-2.0
 
+@import "css-modal/modal"
+
+.notes
+  @extend %modal
+  @extend %modal-theme
+
 <% if site.config['social'] %>
 // Fix Twitter button positioning.
 iframe.twitter-share-button

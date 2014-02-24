@@ -1,0 +1,9 @@
+# Add slide notes here using the format
+#
+# - id: unique-note-id
+#   text: note text
+#
+# Create a link to open the notes in a modal using
+#
+# {% include note.html id="unique-note-id" %}
+-

@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Added slide notes using CSS Modal.
+
 ## 0.0.4
 
 - Bumped highlightjs to 8.0.
