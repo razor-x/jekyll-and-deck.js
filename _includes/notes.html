@@ -1,0 +1,9 @@
+{% for note in site.data.notes %}
+  <section id="modal-notes-{{ note.id }}" class="notes" tabindex="-1"
+    role="dialog" aria-labelledby="modal-notes-{{ note.id }}" aria-hidden="true">
+    <div class="modal-inner">
+      <div class="modal-content">{{ note.text }}</div>
+    </div>
+    <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">×</a>
+  </section>
+{% endfor %}
