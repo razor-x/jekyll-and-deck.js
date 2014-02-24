@@ -6,4 +6,7 @@
 # Create a link to open the notes in a modal using
 #
 # {% include note.html id="unique-note-id" %}
--
+- id: 1
+  text: This slide has notes!
+- id: two
+  text: This slide also has notes!

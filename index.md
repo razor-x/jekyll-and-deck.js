@@ -16,9 +16,13 @@ title: Deck Title
 
 ## Body
 
+{% include note.html id=1 %}
+
 {% endslide %}{% slide.my-class %}
 
 ## More body
+
+{% include note.html id="two" %}
 
 {% endslide %}{% slide footer %}
 
