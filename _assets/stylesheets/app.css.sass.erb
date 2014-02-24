@@ -14,6 +14,10 @@
   @extend %modal
   @extend %modal-theme
 
+// CSS Modal sets overflow-y: scroll
+html
+  overflow-y: hidden
+
 <% if site.config['social'] %>
 // Fix Twitter button positioning.
 iframe.twitter-share-button
