@@ -2,7 +2,7 @@
 
 ## HEAD
 
-- Added slide notes using CSS Modal.
+- Added slide notes using Remodal.
 
 ## 0.0.4
 
