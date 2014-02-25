@@ -1,9 +1,12 @@
+{% if site.data.notes.1.id %}<aside>{% endif %}
 {% for note in site.data.notes %}
-  <section id="modal-notes-{{ note.id }}" class="notes" tabindex="-1"
-    role="dialog" aria-labelledby="modal-notes-{{ note.id }}" aria-hidden="true">
-    <div class="modal-inner">
-      <div class="modal-content">{{ note.text }}</div>
-    </div>
-    <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">×</a>
+  <section class="remodal notes" data-remodal-id="modal-notes-{{ note.id }}"
+    data-remodal-options='{"hashTracking": false}'>
+    <ul>
+    {% for line in note.text %}
+      <li>{{ line }}</li>
+    {% endfor %}
+    </ul>
   </section>
 {% endfor %}
+{% if site.data.notes.1.id %}</aside>{% endif %}
