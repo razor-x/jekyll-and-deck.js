@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 0.0.5
 
 - Added slide notes using Remodal.
 
