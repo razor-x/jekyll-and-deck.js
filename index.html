@@ -21,7 +21,7 @@
   <meta property="og:site_name" content="Site name" />
 
 
-<meta property="og:updated_time" content="2014-02-24T20:55:25+00:00" />
+<meta property="og:updated_time" content="2014-02-25T06:35:01+00:00" />
 
 
   <meta property="og:locale" content="en_US" />
@@ -53,7 +53,7 @@
   <meta name="twitter:creator" content="@evansosenko" />
 
 
-  <link rel="stylesheet" href="http://io.evansosenko.com/jekyll-and-deck.js/assets/app-fc2933273631e786d4391407c153073a.css">
+  <link rel="stylesheet" href="http://io.evansosenko.com/jekyll-and-deck.js/assets/app-d3b45f73e08973e5aadba0ed7921b713.css">
   <script src="http://io.evansosenko.com/jekyll-and-deck.js/assets/deck.js/modernizr.custom-cd9b2b3a025a5b85b4f6623deee66b9e.js"></script>
 </head>
 
@@ -75,13 +75,15 @@
 
 <h2>Body</h2>
 
-<p><a class="notes-link" href="#modal-notes-1" title="Slide notes"><img src="http://io.evansosenko.com/jekyll-and-deck.js/assets/ico-file-29b0415e22257347f346c15d4893dcc4.svg"></a></p>
+<p><a class="notes-link" data-remodal-target="modal-notes-1" href="#modal-notes-1"
+  title="Slide notes"><img src="http://io.evansosenko.com/jekyll-and-deck.js/assets/ico-file-29b0415e22257347f346c15d4893dcc4.svg"></a></p>
 
 <p></section><section class="slide my-class"></p>
 
 <h2>More body</h2>
 
-<p><a class="notes-link" href="#modal-notes-two" title="Slide notes"><img src="http://io.evansosenko.com/jekyll-and-deck.js/assets/ico-file-29b0415e22257347f346c15d4893dcc4.svg"></a></p>
+<p><a class="notes-link" data-remodal-target="modal-notes-two" href="#modal-notes-two"
+  title="Slide notes"><img src="http://io.evansosenko.com/jekyll-and-deck.js/assets/ico-file-29b0415e22257347f346c15d4893dcc4.svg"></a></p>
 
 <p></section><footer class="slide"></p>
 
@@ -97,20 +99,25 @@
 
   </article>
   
-  <section id="modal-notes-1" class="notes" tabindex="-1"
-    role="dialog" aria-labelledby="modal-notes-1" aria-hidden="true">
-    <div class="modal-inner">
-      <div class="modal-content">This slide has notes!</div>
-    </div>
-    <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">×</a>
+
+  <section class="remodal notes" data-remodal-id="modal-notes-1"
+    data-remodal-options='{"hashTracking": false}'>
+    <ul>
+    
+      <li>This slide has notes!</li>
+    
+    </ul>
   </section>
 
-  <section id="modal-notes-two" class="notes" tabindex="-1"
-    role="dialog" aria-labelledby="modal-notes-two" aria-hidden="true">
-    <div class="modal-inner">
-      <div class="modal-content">This slide also has notes!</div>
-    </div>
-    <a href="#!" class="modal-close" title="Close this modal" data-close="Close" data-dismiss="modal">×</a>
+  <section class="remodal notes" data-remodal-id="modal-notes-two"
+    data-remodal-options='{"hashTracking": false}'>
+    <ul>
+    
+      <li>This slide has long notes!</li>
+    
+      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+    
+    </ul>
   </section>
 
 
@@ -118,6 +125,7 @@
 
 
 
-  <script>    Modernizr.load([          {        load: 'https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js',        complete: function () {          if ( !window.jQuery ) {            Modernizr.load('http://io.evansosenko.com/jekyll-and-deck.js/assets/jquery/dist/jquery-b3e2ee3ffccd6fb0f636d56cc88cab0e.js');          }        }      },          {        load: 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js',        complete: function () {          if ( !window.WebFont ) {            Modernizr.load('http://io.evansosenko.com/jekyll-and-deck.js/assets/webfontloader-min/webfont-309a5ee807513c89d6e757d9a25f6150.js');          }        }      },          'http://io.evansosenko.com/jekyll-and-deck.js/assets/app-5b3ceb0031804d334a466bcd48a70672.js'    ]);            </script>
+
+  <script>    Modernizr.load([          {        load: 'https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js',        complete: function () {          if ( !window.jQuery ) {            Modernizr.load('http://io.evansosenko.com/jekyll-and-deck.js/assets/jquery/dist/jquery-b3e2ee3ffccd6fb0f636d56cc88cab0e.js');          }        }      },          {        load: 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.0/webfont.js',        complete: function () {          if ( !window.WebFont ) {            Modernizr.load('http://io.evansosenko.com/jekyll-and-deck.js/assets/webfontloader-min/webfont-309a5ee807513c89d6e757d9a25f6150.js');          }        }      },          'http://io.evansosenko.com/jekyll-and-deck.js/assets/app-1649cc82b58ceb630d622b997ed23d7e.js'    ]);            </script>
 </body>
 </html>
