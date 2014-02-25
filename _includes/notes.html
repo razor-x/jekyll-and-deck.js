@@ -1,7 +1,7 @@
 {% if site.data.notes.1.id %}<aside>{% endif %}
 {% for note in site.data.notes %}
   <section class="remodal notes" data-remodal-id="modal-notes-{{ note.id }}"
-    data-remodal-options='{"hashTracking": false}'>
+    data-remodal-options='{"hashTracking": false}' style="display:none;">
     <ul>
     {% for line in note.text %}
       <li>{{ line }}</li>

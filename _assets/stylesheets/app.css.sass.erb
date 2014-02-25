@@ -34,6 +34,10 @@ aside.social-buttons
 body
   padding-right: 0 !important
 
+// Needed to show the notes since display: none is set.
+body.remodal_lock .remodal.notes
+  display: inline-block !important
+
 // Remodal close button will otherwise show unwanted underline.
 .remodal-overlay .remodal-close:hover
   color: transparent
