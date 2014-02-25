@@ -2,21 +2,12 @@
 // Add deck extensions from deck.js/extensions.
 // Add deck styles and transitions from deck.js/themes.
 //= require normalize-css
+//= require remodal
 //= require highlightjs/styles/default
 //= require css-spinners/css/spinner/spinner
 //= require deck.js/core/deck.core
 //= require deck.js/themes/transition/fade
 //= require deck.js/themes/style/web-2.0
-
-@import "css-modal/modal"
-
-.notes
-  @extend %modal
-  @extend %modal-theme
-
-// CSS Modal sets overflow-y: scroll
-html
-  overflow-y: hidden
 
 <% if site.config['social'] %>
 // Fix Twitter button positioning.
@@ -38,3 +29,15 @@ aside.social-buttons
   div.fb-like.fb_iframe_widget > span
     vertical-align: initial !important
 <% end %>
+
+// Remodal adds padding-right which shifts slides.
+body
+  padding-right: 0 !important
+
+// Remodal close button will otherwise show unwanted underline.
+.remodal-overlay .remodal-close:hover
+  color: transparent
+
+// Remodal notes should not be centered.
+.notes ul
+  text-align: left

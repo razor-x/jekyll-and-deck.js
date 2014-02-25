@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "dependencies": {
     "css-spinners": "1.0.1",
-    "css-modal ": "master",
+    "remodal ": "0.1.1",
     "firebase": "1.0.2",
     "firebase-simple-login": "1.2.3",
     "MathJax": "latest",

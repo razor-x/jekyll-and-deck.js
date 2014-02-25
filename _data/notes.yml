@@ -1,7 +1,9 @@
 # Add slide notes here using the format
 #
 # - id: unique-note-id
-#   text: note text
+#   text:
+#     - note text
+#     - more note text
 #
 # Create a link to open the notes in a modal using
 #
