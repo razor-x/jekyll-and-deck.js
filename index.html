@@ -1,0 +1,36 @@
+---
+layout: default
+title: Deck Title
+---
+
+{% slide header %}
+  <div style="text-align:center">
+    <button id="auth-login" style="display:none">login</button>
+    <button id="auth-logout" style="display:none">logout</button>
+  </div>
+
+  <h1>{{ page.title }}</h1>
+{% endslide %}
+
+{% slide %}
+  <h2>Body</h2>
+{% endslide %}
+
+{% slide.my-class %}
+  <h2>More body</h2>
+{% endslide %}
+
+{% slide footer %}
+  <h2>Final slide</h2>
+
+  <p>
+    <a href='http://www.w3.org/html/logo/'>
+      <img alt='HTML5 Powered with CSS3 / Styling, and Semantics' height='64' src='{% asset_path html5-badge-h-css3-semantics.png %}' title='HTML5 Powered with CSS3 / Styling, and Semantics' width='165'>
+    </a>
+  </p>
+
+  {% if site.social %}
+    {% capture social_buttons %}{% include social-buttons.html %}{% endcapture %}
+    {{ social_buttons | strip_newlines }}
+  {% endif %}
+{% endslide %}

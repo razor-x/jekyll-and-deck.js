@@ -2,6 +2,7 @@
 
 ## 0.0.5
 
+- Use HTML over markdown.
 - Added slide notes using Remodal.
 
 ## 0.0.4

@@ -17,7 +17,6 @@ Lots of baked in features.
     for dev and testing modes, run `rake -D` for info.
   * Automatically publish to [GitHub pages](http://pages.github.com/)
     with [Travis CI](https://travis-ci.org/).
-  * Write your deck with [Markdown](http://daringfireball.net/projects/markdown/).
   * Use [Firebase](https://www.firebase.com/) to set up a remote control for your deck.
   * Slide notes using [Remodal](http://vodkabears.github.io/remodal/).
 
