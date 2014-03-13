@@ -10,7 +10,7 @@ gem 'jekyll', '~> 1.4.1'
 
 # Jekyll::AssetsPlugin and dependencies
 gem 'jekyll-assets', '~> 0.7.2'
-gem 'sass', '~> 3.2.12'
+gem 'sass', '~> 3.3.2'
 gem 'uglifier', '~> 2.4.0'
 gem 'coffee-script', '~> 2.2.0'
 
