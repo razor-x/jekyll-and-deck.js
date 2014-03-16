@@ -4,8 +4,8 @@ module Jekyll
       super
       markup = markup.strip.split(' ').first
       args = markup.nil? ? [] : markup.split('.')
-
-      @slide_tag = args.shift
+      tag_with_id = args.shift
+      @slide_tag, @slide_id = tag_with_id.split '#' unless tag_with_id.nil?
       @slide_tag = nil if @slide_tag == ''
       @classes = args
     end
@@ -15,10 +15,11 @@ module Jekyll
       default_slide_tag ||= 'section'
       @slide_tag ||= default_slide_tag
 
+      id = @slide_id.nil? ? '' : %Q{ id="#{@slide_id}"}
       classes = @classes.empty? ? '' : " #{@classes.join(' ')}"
 
       result = ''
-      result << %Q{<#{@slide_tag} class="slide#{classes}">}
+      result << %Q{<#{@slide_tag}#{id} class="slide#{classes}">}
       result << super
       result << %Q{</#{@slide_tag}>}
     end

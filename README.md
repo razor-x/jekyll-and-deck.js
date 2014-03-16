@@ -2,7 +2,6 @@
 
 [![Dependency Status](https://gemnasium.com/razor-x/jekyll-and-deck.js.png)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
 [![Build Status](https://travis-ci.org/razor-x/jekyll-and-deck.js.png?branch=demo)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/razor-x/jekyll-and-deck.js/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Source for your deck running on Jekyll and deck.js.
 Just clone and deck.
@@ -17,7 +16,6 @@ Lots of baked in features.
     for dev and testing modes, run `rake -D` for info.
   * Automatically publish to [GitHub pages](http://pages.github.com/)
     with [Travis CI](https://travis-ci.org/).
-  * Write your deck with [Markdown](http://daringfireball.net/projects/markdown/).
   * Use [Firebase](https://www.firebase.com/) to set up a remote control for your deck.
   * Slide notes using [Remodal](http://vodkabears.github.io/remodal/).
 
