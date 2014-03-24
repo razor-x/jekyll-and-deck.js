@@ -3,6 +3,7 @@
 ### HEAD
 
 - Use parseUri.
+- Added 'use strict'.
 
 ## 0.0.5
 
