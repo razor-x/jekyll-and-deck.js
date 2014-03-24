@@ -1,15 +1,18 @@
 #= require firebase
 #= require firebase-simple-login
+#= require bower-parseuri
 
-params = window.location.search.substring(1).split("&")
-  .map (el) -> el.split "="
 
-behavior = params[0][0]
+parseUri.options.strictMode = true
+uri_keys = parseUri(document.URL).queryKey
 
-if behavior in ['broadcast', 'follow']
+follow = uri_keys.follow
+broadcast = uri_keys.broadcast
+
+if follow or broadcast
   ref = new Firebase "<%= site.config['firebase'] %>"
 
-if behavior is 'broadcast'
+if broadcast
   logoutBtn = $('#auth-logout')
   loginBtn = $('#auth-login')
 
@@ -27,7 +30,7 @@ if behavior is 'broadcast'
   $(document).bind 'deck.change', (event, from, to) ->
     ref.set {'slide': to}
 
-else if behavior is 'follow'
+else if follow
   $('.notes-link').hide()
   ref.child 'slide'
   .on 'value', (value) -> $.deck('go', value.val())

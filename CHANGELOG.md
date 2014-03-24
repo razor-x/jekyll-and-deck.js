@@ -1,5 +1,9 @@
 # Changelog
 
+### HEAD
+
+- Use parseUri.
+
 ## 0.0.5
 
 - Use HTML over markdown.
