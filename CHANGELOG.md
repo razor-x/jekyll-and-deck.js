@@ -4,6 +4,7 @@
 
 - Use parseUri.
 - Added 'use strict'.
+- Added Display Advertising to Google Analytics Tracking Code.
 
 ## 0.0.5
 
