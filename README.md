@@ -1,5 +1,6 @@
 # Jekyll & deck.js
 
+[![MIT License](http://img.shields.io/badge/license-MIT-red.svg)](./LICENSE.txt)
 [![Dependency Status](http://img.shields.io/gemnasium/razor-x/jekyll-and-deck.js.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
 [![Build Status](http://img.shields.io/travis/razor-x/jekyll-and-deck.js/demo.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
 
