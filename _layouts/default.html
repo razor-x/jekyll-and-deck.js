@@ -24,6 +24,7 @@
 
 {% capture site_javascript %}
   <script>
+    'use strict';
     Modernizr.load([
     {% for lib in site.cdn.libs %}
       {
