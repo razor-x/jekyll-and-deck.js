@@ -1,6 +1,5 @@
 {
-  "name": "Jekyll & Deck",
-  "version": "0.0.5",
+  "name": "Jekyll & Deck.js",
   "dependencies": {
     "css-spinners": "1.0.1",
     "remodal ": "0.1.1",

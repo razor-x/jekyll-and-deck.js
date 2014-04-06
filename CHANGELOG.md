@@ -1,6 +1,6 @@
 # Changelog
 
-### HEAD
+## 0.1.0
 
 - Use parseUri.
 - Added 'use strict'.
