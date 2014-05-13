@@ -77,9 +77,9 @@ If you want to merge in future updates from this project and have your own origi
 set up a separate branch to track this.
 
 ````bash
-$ git remote rename origin razor-x-jekyll-and-deck.js
+$ git remote rename origin upstream
 $ git branch jekyll-and-deck.js
-$ git branch -u razor-x-jekyll-and-deck.js/master jekyll-and-deck.js
+$ git branch -u upstream/master jekyll-and-deck.js
 ````
 
 Then add an origin and push master
@@ -95,9 +95,9 @@ which you can then merge into your other branches.
 If you later clone your repo you will need to create the update branch again.
 
 ````bash
-$ git remote add razor-x-jekyll-and-deck.js https://github.com/razor-x/jekyll-and-deck.js.git
-$ git fetch razor-x-jekyll-and-deck.js
-$ git checkout -b jekyll-and-deck.js razor-x-jekyll-and-deck.js/master
+$ git remote add upstream https://github.com/razor-x/jekyll-and-deck.js.git
+$ git fetch upstream
+$ git checkout -b jekyll-and-deck.js upstream/master
 ````
 
 ## Automatic publishing to GitHub pages with Travis CI
