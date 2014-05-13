@@ -2,7 +2,7 @@
 domain: http://razor-x.github.io/jekyll-and-deck.js
 baseurl: http://razor-x.github.io/jekyll-and-deck.js
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 exclude:
   - CHANGELOG.md
   - LICENSE.txt
