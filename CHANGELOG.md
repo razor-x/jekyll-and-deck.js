@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+- Jekyll to 2.0.
+- All other libraries updated.
+
 ## 0.1.0
 
 - Use parseUri.
