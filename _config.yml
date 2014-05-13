@@ -2,7 +2,7 @@
 domain: http://io.evansosenko.com/jekyll-and-deck.js
 baseurl: http://io.evansosenko.com/jekyll-and-deck.js
 markdown: redcarpet
-pygments: true
+highlighter: pygments
 exclude:
   - CHANGELOG.md
   - LICENSE.txt
