@@ -5,11 +5,11 @@ node_js: [ 0.10 ]
 before_script:
   - npm install bower -g
   - bower install
-  
+
 install:
   - bundle update
 
-script: rake travis
+script: bundle exec rake travis
 
 # set the branch that will be built and published to GitHub pages
 branches:
