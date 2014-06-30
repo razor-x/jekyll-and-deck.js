@@ -1,5 +1,4 @@
 .jekyll-assets-cache/
-.kateproject.d/
 *.zip
 Gemfile.lock
 _site/
