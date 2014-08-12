@@ -12,6 +12,6 @@ gem 'jekyll', '~> 2.2.0'
 gem 'jekyll-assets', '~> 0.9.2'
 gem 'sass', '~> 3.3.2'
 gem 'uglifier', '~> 2.5.0'
-gem 'coffee-script', '~> 2.2.0'
+gem 'coffee-script', '~> 2.3.0'
 
 # Additional Jekyll plugins
