@@ -1,10 +1,10 @@
 {
   "name": "Jekyll & Deck.js",
   "dependencies": {
-    "css-spinners": "1.0.1",
-    "remodal ": "0.1.5",
-    "firebase": "1.0.15",
-    "firebase-simple-login": "1.4.1",
+    "css-spinners": "1.0.2",
+    "remodal ": "0.2.0",
+    "firebase": "1.0.21",
+    "firebase-simple-login": "1.6.3",
     "bower-parseuri": "latest",
     "MathJax": "latest",
     "webfontloader-min": "1.5.1",
