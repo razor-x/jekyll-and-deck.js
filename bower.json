@@ -3,8 +3,8 @@
   "dependencies": {
     "css-spinners": "1.0.2",
     "remodal ": "0.2.0",
-    "firebase": "1.0.19",
-    "firebase-simple-login": "1.6.2",
+    "firebase": "1.0.21",
+    "firebase-simple-login": "1.6.3",
     "bower-parseuri": "latest",
     "MathJax": "latest",
     "webfontloader-min": "1.5.1",
