@@ -2,7 +2,7 @@
 
 ## HEAD
 
-- Jekyll to 2.0.
+- Jekyll to 2.3.0.
 - All other libraries updated.
 
 ## 0.1.0
