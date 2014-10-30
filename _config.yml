@@ -1,7 +1,7 @@
 ---
 # Jekyll options.
-domain: http://io.evansosenko.com/jekyll-and-deck.js
-baseurl: http://io.evansosenko.com/jekyll-and-deck.js
+domain: https://io.evansosenko.com/jekyll-and-deck.js
+baseurl: https://io.evansosenko.com/jekyll-and-deck.js
 markdown: redcarpet
 highlighter: pygments
 exclude:
@@ -23,7 +23,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: http://io.evansosenko.com/jekyll-and-deck.js/assets/
+  baseurl: https://io.evansosenko.com/jekyll-and-deck.js/assets/
   sources:
     - _assets/images
     - _assets/javascripts
@@ -49,7 +49,7 @@ cdn:
     - [ "https://ajax.googleapis.com/ajax/libs/webfont/1.5.1/webfont.js", "!window.WebFont", " webfontloader-min/webfont" ]
 
 # Uncomment below to use Firebase as a deck remote.
-# firebase: https://YOUR.firebaseio.com/
+firebase: https://jekyll-and-deck-js.firebaseio.com/
 
 # Uncomment below and add your Tracking ID and URL to enable Google Analytics.
 # google_analytics:

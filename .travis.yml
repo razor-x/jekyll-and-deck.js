@@ -1,6 +1,6 @@
 ---
 language: [ ruby, node_js ]
-rvm: [ 2.1.1 ]
+rvm: [ 2.1.4 ]
 node_js: [ 0.10 ]
 
 before_script:
@@ -9,9 +9,6 @@ before_script:
 
 before_install:
   - 'echo ''gem: --no-document'' > ~/.gemrc'
-
-install:
-  - bundle update
 
 script: bundle exec rake travis
 

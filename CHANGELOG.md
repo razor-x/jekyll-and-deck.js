@@ -2,8 +2,10 @@
 
 ## HEAD
 
-- Jekyll to 2.3.0.
+- Jekyll to 2.4.0.
+- Firebase to 1.1.3: uses new core auth.
 - All other libraries updated.
+- Check-in Gemfile.lock.
 
 ## 0.1.0
 

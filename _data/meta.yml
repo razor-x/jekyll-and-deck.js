@@ -8,9 +8,9 @@ site_name: Site name
 
 # This meta data is optional.
 # determiner: null
-# image: http://io.evansosenko.com/jekyll-and-deck.js/preview.png
-# audio: http://io.evansosenko.com/jekyll-and-deck.js/talk.mp3
-# video: http://io.evansosenko.com/jekyll-and-deck.js/talk.mpg
+# image: https://io.evansosenko.com/jekyll-and-deck.js/preview.png
+# audio: https://io.evansosenko.com/jekyll-and-deck.js/talk.mp3
+# video: https://io.evansosenko.com/jekyll-and-deck.js/talk.mpg
 # type: website
 #
 twitter:

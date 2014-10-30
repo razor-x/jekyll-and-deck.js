@@ -1,13 +1,13 @@
 # Jekyll & deck.js
 
-[![MIT License](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![Dependency Status](http://img.shields.io/gemnasium/razor-x/jekyll-and-deck.js.svg?style=flat)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
-[![Build Status](http://img.shields.io/travis/razor-x/jekyll-and-deck.js/demo.svg?style=flat)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+[![MIT License](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/jekyll-and-deck.js.svg?style=flat)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
+[![Build Status](https://img.shields.io/travis/razor-x/jekyll-and-deck.js/demo.svg?style=flat)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
 
 Source for your deck running on Jekyll and deck.js.
 Just clone and deck.
 
-Demo at [io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyll-and-deck.js/).
+Demo at [io.evansosenko.com/jekyll-and-deck.js/](https://io.evansosenko.com/jekyll-and-deck.js/).
 
 Lots of baked in features.
 
@@ -57,6 +57,9 @@ $ git clone https://github.com/razor-x/jekyll-and-deck.js.git my-deck
 run `bundle && bower install` and make your deck in `index.haml`.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) and [deck.js docs](http://imakewebthings.com/deck.js/docs/) for the rest of the details.
 
+Running off the `master` branch may be unstable and is not suitable for production.
+Only tagged releases are considered stable.
+
 ## Demo site and documentation
 
 The `master` branch of this project is designed to be used
@@ -69,7 +72,7 @@ real examples and documentation for the included features.
 That branch is automatically built and published by Travis CI.
 
 Demo deck hosted on GitHub pages:
-[io.evansosenko.com/jekyll-and-deck.js/](http://io.evansosenko.com/jekyll-and-deck.js/).
+[io.evansosenko.com/jekyll-and-deck.js/](https://io.evansosenko.com/jekyll-and-deck.js/).
 
 ## Add future update support
 
@@ -144,7 +147,8 @@ $ git push
 ## Updating
 
 The `Gemfile` is using pessimistic version constraints for everything,
-so if you want major updates, you need to bump the versions yourself.
+so if you don't want to wait for updates, you need to bump the versions yourself,
+run `bundle update` and commit the updated `Gemfile.lock`.
 
 JavaScript library versions need to be updated in `bower.json` and `_config.yml` (for CDN).
 
