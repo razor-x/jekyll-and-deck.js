@@ -1,6 +1,5 @@
 .jekyll-assets-cache/
 .sass-cache/
 *.zip
-Gemfile.lock
 _site/
 bower_components/

@@ -147,7 +147,8 @@ $ git push
 ## Updating
 
 The `Gemfile` is using pessimistic version constraints for everything,
-so if you want major updates, you need to bump the versions yourself.
+so if you don't want to wait for updates, you need to bump the versions yourself,
+run `bundle update` and commit the updated `Gemfile.lock`.
 
 JavaScript library versions need to be updated in `bower.json` and `_config.yml` (for CDN).
 
