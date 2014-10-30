@@ -1,7 +1,7 @@
 ---
 # Jekyll options.
-domain: http://razor-x.github.io/jekyll-and-deck.js
-baseurl: http://razor-x.github.io/jekyll-and-deck.js
+domain: https://razor-x.github.io/jekyll-and-deck.js
+baseurl: https://razor-x.github.io/jekyll-and-deck.js
 markdown: redcarpet
 highlighter: pygments
 exclude:
@@ -23,7 +23,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: http://razor-x.github.io/jekyll-and-deck.js/assets/
+  baseurl: https://razor-x.github.io/jekyll-and-deck.js/assets/
   sources:
     - _assets/images
     - _assets/javascripts
