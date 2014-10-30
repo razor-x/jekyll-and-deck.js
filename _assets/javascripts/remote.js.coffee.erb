@@ -1,5 +1,4 @@
 #= require firebase
-#= require firebase-simple-login
 #= require bower-parseuri
 
 'use strict'
@@ -17,16 +16,18 @@ if broadcast
   logoutBtn = $('#auth-logout')
   loginBtn = $('#auth-login')
 
-  auth = new FirebaseSimpleLogin ref, (error, user) ->
-   if user
+  authData = ref.getAuth()
+
+  ref.onAuth (authData) ->
+    if authData
       loginBtn.hide()
       logoutBtn.show()
     else
       logoutBtn.hide()
       loginBtn.show()
 
-  logoutBtn.click -> auth.logout()
-  loginBtn.click -> auth.login 'github', {rememberMe: true}
+  logoutBtn.click -> ref.unauth()
+  loginBtn.click -> ref.authWithOAuthPopup 'github', (err, authData) ->
 
   $(document).bind 'deck.change', (event, from, to) ->
     ref.set {'slide': to}
@@ -34,4 +35,4 @@ if broadcast
 else if follow
   $('.notes-link').hide()
   ref.child 'slide'
-  .on 'value', (value) -> $.deck('go', value.val())
+  .on 'value', (value) -> $.deck 'go', value.val()
