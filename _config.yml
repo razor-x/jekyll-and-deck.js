@@ -15,6 +15,7 @@ exclude:
   - bower.json
   - bower_components
   - deck-*.zip
+  - vendor
 
 gems:
   - jekyll-assets
