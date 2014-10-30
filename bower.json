@@ -9,7 +9,7 @@
     "MathJax": "latest",
     "webfontloader-min": "1.5.1",
     "highlightjs": "8.3.0",
-    "normalize-css": "3.0.1",
+    "normalize-css": "3.0.2",
     "jquery": "2.1.1",
     "deck.js": "latest"
   }
