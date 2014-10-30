@@ -57,6 +57,9 @@ $ git clone https://github.com/razor-x/jekyll-and-deck.js.git my-deck
 run `bundle && bower install` and make your deck in `index.haml`.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) and [deck.js docs](http://imakewebthings.com/deck.js/docs/) for the rest of the details.
 
+Running off the `master` branch may be unstable and is not suitable for production.
+Only tagged releases are considered stable.
+
 ## Demo site and documentation
 
 The `master` branch of this project is designed to be used
