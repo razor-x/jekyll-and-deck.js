@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Update Remodal to 0.3.0.
 - Update highlightjs to 8.4.0.
 - Update uglifier to 2.6.0.
 - Update rake to 10.4.2.

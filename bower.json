@@ -2,7 +2,7 @@
   "name": "Jekyll & Deck.js",
   "dependencies": {
     "css-spinners": "1.0.2",
-    "remodal ": "0.2.1",
+    "remodal ": "0.3.0",
     "firebase": "2.0.6",
     "bower-parseuri": "7e5161483bc1b03c6fbfd872f39073284bd014a2",
     "MathJax": "2.4.0",
