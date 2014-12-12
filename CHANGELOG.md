@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Update uglifier to 2.6.0.
 - Update rake to 10.4.2.
 - Jekyll to 2.5.2.
 - Firebase to 1.1.3: uses new core auth.
