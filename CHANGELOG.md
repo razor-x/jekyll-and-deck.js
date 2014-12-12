@@ -2,8 +2,12 @@
 
 ## HEAD
 
-- Jekyll to 2.4.0.
-- Firebase to 1.1.3: uses new core auth.
+- Update Remodal to 0.3.0.
+- Update highlightjs to 8.4.0.
+- Update uglifier to 2.6.0.
+- Update rake to 10.4.2.
+- Jekyll to 2.5.2.
+- Firebase to 2.0.6: uses new core auth.
 - All other libraries updated.
 - Check-in Gemfile.lock.
 
