@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.0.0
 
 - Update Remodal to 0.3.0.
 - Update highlightjs to 8.4.0.
