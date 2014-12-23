@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Update jQuery to 2.1.3.
+
 ## 1.0.0
 
 - Update Remodal to 0.3.0.

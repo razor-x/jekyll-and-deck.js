@@ -46,7 +46,7 @@ cdn_enabled: true
 cdn:
   # [ url, fallback test, local asset fallback path ]
   libs:
-    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js", "!window.jQuery", "jquery/dist/jquery" ]
+    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js", "!window.jQuery", "jquery/dist/jquery" ]
     - [ "https://ajax.googleapis.com/ajax/libs/webfont/1.5.1/webfont.js", "!window.WebFont", " webfontloader-min/webfont" ]
 
 # Uncomment below to use Firebase as a deck remote.
