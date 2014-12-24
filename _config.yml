@@ -33,6 +33,7 @@ assets:
   compress:
     css: sass
     js: uglifier
+  autosize: true
 
 # Default html tag to use for slides.
 # Override per slide with {% slide tagname %}
