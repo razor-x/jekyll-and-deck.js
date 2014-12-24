@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width" />
   {% include meta.html %}
-  {% stylesheet app %}
   {% javascript head %}
+  <script>head.load('{% asset_path app.css %}');</script>
   <script>{% asset fonts.js %}</script>
   <script>{% asset load.js %}</script>
 </head>

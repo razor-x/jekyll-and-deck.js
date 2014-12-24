@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Load app.css with HeadJS.
 - Loading screen waits until MathJax typesetting completes.
 - Replace Modernizr.load with HeadJS.
 - Update Remodal to 0.4.1.
