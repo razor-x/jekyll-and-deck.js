@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Loading screen waits until MathJax typesetting completes.
 - Replace Modernizr.load with HeadJS.
 - Update jQuery to 2.1.3.
 

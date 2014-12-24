@@ -19,3 +19,4 @@ head.ready 'MathJax', ->
 
 # Put code that needs to run after MathJax is loaded in this function
 initMathJax = ->
+  MathJax.Hub.Register.StartupHook 'End', -> $.deck '.slide'

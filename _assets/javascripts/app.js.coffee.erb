@@ -6,7 +6,11 @@
 
 'use strict'
 
+$('.deck-container').hide()
+
 $(document).bind 'deck.init', ->
+  $('.deck-container').show()
+
   # Show social buttons after deck is loaded.
   <% if site.config['social'] %>
   $('aside.social-buttons').hide().css('visibility', 'visible').fadeIn()
@@ -25,7 +29,9 @@ $(document).bind 'deck.init', ->
 <% if site.config['firebase'] then require_asset 'remote' end %>
 
 # Initialize the deck.
+<% unless site.config['mathjax'] %>
 $.deck '.slide'
+<% end %>
 
 # Invoke highlight.js on page load.
 $ -> hljs.initHighlighting()
