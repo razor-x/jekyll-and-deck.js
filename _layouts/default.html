@@ -39,23 +39,23 @@
       '{% asset_path app.js %}'
     ]);
   {% if site.social.facebook.enabled %}
-    {% asset vendor/social-facebook %}
+    {% asset vendor/social-facebook.js %}
   {% endif %}
 
   {% if site.social.google.enabled %}
-    {% asset vendor/social-google %}
+    {% asset vendor/social-google.js %}
   {% endif %}
 
   {% if site.social.twitter.enabled %}
-    {% asset vendor/social-twitter %}
+    {% asset vendor/social-twitter.js %}
   {% endif %}
 
   {% if site.google_analytics %}
-    {% asset vendor/google-analytics %}
+    {% asset vendor/google-analytics.js %}
   {% endif %}
 
   {% if site.piwik %}
-    {% asset vendor/piwik %}
+    {% asset vendor/piwik.js %}
   {% endif %}
   </script>
 {% endcapture %}
