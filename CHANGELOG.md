@@ -4,6 +4,7 @@
 
 - Loading screen waits until MathJax typesetting completes.
 - Replace Modernizr.load with HeadJS.
+- Update Remodal to 0.4.1.
 - Update jQuery to 2.1.3.
 
 ## 1.0.0
