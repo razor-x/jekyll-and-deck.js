@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width" />
   {% include meta.html %}
   {% stylesheet app %}
-  <script src="{% asset_path deck.js/modernizr.custom.js %}"></script>
+  {% javascript head %}
+  <script>{% asset fonts.js %}</script>
 </head>
 
 <body>
@@ -22,22 +23,11 @@
   <div id="fb-root"></div>
 {% endif %}
 
-{% capture site_javascript %}
+  <script>{% asset load.js %}</script>
+
   <script>
     'use strict';
-    Modernizr.load([
-    {% for lib in site.cdn.libs %}
-      {
-        load: '{% if site.cdn_enabled %}{{ lib[0] }}{% else %}{{ lib[2] | asset_path }}{% endif %}',
-        complete: function () {
-          if ( {{ lib[1] }} ) {
-            Modernizr.load('{{ lib[2] | asset_path }}');
-          }
-        }
-      },
-    {% endfor %}
-      '{% asset_path app.js %}'
-    ]);
+
   {% if site.social.facebook.enabled %}
     {% asset vendor/social-facebook.js %}
   {% endif %}
@@ -58,7 +48,5 @@
     {% asset vendor/piwik.js %}
   {% endif %}
   </script>
-{% endcapture %}
-{{ site_javascript | strip_newlines }}
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Replace Modernizr.load with HeadJS.
 - Update jQuery to 2.1.3.
 
 ## 1.0.0
