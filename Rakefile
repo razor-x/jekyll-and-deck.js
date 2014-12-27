@@ -18,6 +18,11 @@ destination = File.join config[:destination], '/'
 # Set "rake build" as default task
 task :default => :build
 
+# Redefine system to exit with nonzero status on fail.
+def system(*args)
+  super(*args) or exit!(1)
+end
+
 # Spawn a server and kill it gracefully when interrupt is received
 def spawn *cmd
   pid = Process.spawn 'bundle', 'exec', *cmd
