@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.2
+
+- Fix body display bug.
+
 ## 1.1.1
 
 - Avoid flash of unstyled content due to asynchronously loading CSS.
