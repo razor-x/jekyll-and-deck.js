@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Avoid flash of unstyled content due to asynchronously loading CSS.
 - Require fonts in head.js instead of inline.
 - Travis CI updates.
 
