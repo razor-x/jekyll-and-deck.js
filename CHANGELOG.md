@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.1.1
 
 - Avoid flash of unstyled content due to asynchronously loading CSS.
 - Require fonts in head.js instead of inline.
