@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Travis CI updates.
+
 ## 1.1.0
 
 - Enable autosize for Jekyll Assets.
