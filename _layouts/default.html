@@ -9,7 +9,7 @@
   <script>{% asset load.js %}</script>
 </head>
 
-<body>
+<body style="display:none;">
   <div id="deck-loading_screen">
     <h1><div class="spinner"></div>Loading Deck</h1>
   </div>
@@ -24,7 +24,6 @@
 
   <script>
     'use strict';
-    document.getElementsByTagName('body')[0].style.display = 'none'
 
   {% if site.social.facebook.enabled %}
     {% asset vendor/social-facebook.js %}
