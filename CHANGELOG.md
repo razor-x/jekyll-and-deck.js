@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.1.2
 
 - Fix body display bug.
 
