@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.1.0
 
 - Enable autosize for Jekyll Assets.
 - Load app.css with HeadJS.
