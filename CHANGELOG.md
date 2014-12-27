@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+- Avoid flash of unstyled content due to asynchronously loading CSS.
+- Require fonts in head.js instead of inline.
+- Travis CI updates.
+
 ## 1.1.0
 
 - Enable autosize for Jekyll Assets.
