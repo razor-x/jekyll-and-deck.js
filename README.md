@@ -29,7 +29,7 @@ Lots of baked in features.
 
   * Syntax highlighting with [highlight.js](http://highlightjs.org/).
   * Load fonts with [Web Font Loader](https://github.com/typekit/webfontloader).
-  * Load JavaScript asynchronously with [Modernizr.load](http://modernizr.com/docs/#load).
+  * Load JavaScript asynchronously with [HeadJS](http://headjs.com).
   * [MathJax](http://www.mathjax.org/) ready:
     just set `mathjax: true` in `_config.yml`.
   * Meta data system for SEO and social media:

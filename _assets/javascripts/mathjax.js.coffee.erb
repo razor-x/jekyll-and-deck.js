@@ -6,18 +6,17 @@ config = 'TeX-AMS-MML_HTMLorMML'
 
 # Put code that needs to run before MathJax is loaded above this
 <% if site.config['local'] %>
-Modernizr.load
-  load: "MathJax/MathJax.js?config=#{config}"
-  complete: ->
-    if window.MathJax then initMathJax()
+head.load MathJax: "MathJax/MathJax.js?config=#{config}"
 <% else %>
-Modernizr.load
-  load: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=#{config}"
-  complete: ->
-    if !window.MathJax
-      Modernizr.load "MathJax/MathJax.js?config=#{config}"
-    if window.MathJax then initMathJax()
+head.load MathJax: "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=#{config}", ->
 <% end %>
+
+head.ready 'MathJax', ->
+  if !window.MathJax
+    head.load "MathJax/MathJax.js?config=#{config}", initMathJax
+  else
+    initMathJax()
 
 # Put code that needs to run after MathJax is loaded in this function
 initMathJax = ->
+  MathJax.Hub.Register.StartupHook 'End', -> $.deck '.slide'

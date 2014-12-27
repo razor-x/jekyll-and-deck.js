@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.1.0
+
+- Enable autosize for Jekyll Assets.
+- Load app.css with HeadJS.
+- Loading screen waits until MathJax typesetting completes.
+- Replace Modernizr.load with HeadJS.
+- Update Remodal to 0.4.1.
+- Update jQuery to 2.1.3.
+
 ## 1.0.0
 
 - Update Remodal to 0.3.0.

@@ -5,8 +5,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="viewport" content="width=device-width" />
   {% include meta.html %}
-  {% stylesheet app %}
-  <script src="{% asset_path deck.js/modernizr.custom.js %}"></script>
+  {% javascript head %}
+  <script>head.load('{% asset_path app.css %}');</script>
+  <script>{% asset fonts.js %}</script>
+  <script>{% asset load.js %}</script>
 </head>
 
 <body>
@@ -22,43 +24,28 @@
   <div id="fb-root"></div>
 {% endif %}
 
-{% capture site_javascript %}
   <script>
     'use strict';
-    Modernizr.load([
-    {% for lib in site.cdn.libs %}
-      {
-        load: '{% if site.cdn_enabled %}{{ lib[0] }}{% else %}{{ lib[2] | asset_path }}{% endif %}',
-        complete: function () {
-          if ( {{ lib[1] }} ) {
-            Modernizr.load('{{ lib[2] | asset_path }}');
-          }
-        }
-      },
-    {% endfor %}
-      '{% asset_path app.js %}'
-    ]);
+
   {% if site.social.facebook.enabled %}
-    {% asset vendor/social-facebook %}
+    {% asset vendor/social-facebook.js %}
   {% endif %}
 
   {% if site.social.google.enabled %}
-    {% asset vendor/social-google %}
+    {% asset vendor/social-google.js %}
   {% endif %}
 
   {% if site.social.twitter.enabled %}
-    {% asset vendor/social-twitter %}
+    {% asset vendor/social-twitter.js %}
   {% endif %}
 
   {% if site.google_analytics %}
-    {% asset vendor/google-analytics %}
+    {% asset vendor/google-analytics.js %}
   {% endif %}
 
   {% if site.piwik %}
-    {% asset vendor/piwik %}
+    {% asset vendor/piwik.js %}
   {% endif %}
   </script>
-{% endcapture %}
-{{ site_javascript | strip_newlines }}
 </body>
 </html>

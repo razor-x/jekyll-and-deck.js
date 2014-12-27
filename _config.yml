@@ -33,6 +33,7 @@ assets:
   compress:
     css: sass
     js: uglifier
+  autosize: true
 
 # Default html tag to use for slides.
 # Override per slide with {% slide tagname %}
@@ -41,13 +42,14 @@ slide_tag: section
 # Set to true to load MathJax.
 mathjax: false
 
-# Use a cdn to load some libraries.
+# Use a CDN to load some libraries.
+# Libraries are loaded first, asynchronously,
+# and should not depend on each other.
 cdn_enabled: true
 cdn:
-  # [ url, fallback test, local asset fallback path ]
+  # [ url, loaded check, local asset fallback path ]
   libs:
-    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js", "!window.jQuery", "jquery/dist/jquery" ]
-    - [ "https://ajax.googleapis.com/ajax/libs/webfont/1.5.1/webfont.js", "!window.WebFont", " webfontloader-min/webfont" ]
+    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
 
 # Uncomment below to use Firebase as a deck remote.
 firebase: https://jekyll-and-deck-js.firebaseio.com/
