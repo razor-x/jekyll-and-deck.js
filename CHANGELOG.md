@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Regenerate bower.json.
+
 ## 1.2.1
 
 Version 1.2.0 introduced a change that would
