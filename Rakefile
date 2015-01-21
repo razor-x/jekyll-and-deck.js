@@ -62,7 +62,7 @@ desc 'Generate the deck and start a server (for presenting locally).' + "\n" +
      'Load local resources to work offline, no auto generate.' + "\n" +
      'Loads _config.local.yml as an additional config file.'
 task :deck do
-  spawn 'jekyll', 'serve', '--config', local_config
+  spawn 'jekyll', 'serve', '--no-watch', '--config', local_config
 end
 
 # rake dev
@@ -70,7 +70,7 @@ desc 'Start a server and watch the deck for changes (for development).' + "\n" +
      'For performance, use MathJax CDN only (if enabled).' + "\n" +
      'Loads _config.dev.yml as an additional config file.'
 task :dev do
-  spawn 'jekyll', 'serve', '--watch', '--config', dev_config
+  spawn 'jekyll', 'serve', '--config', dev_config
 end
 
 # rake deploy
