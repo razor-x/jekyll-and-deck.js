@@ -17,6 +17,7 @@ Lots of baked in features.
     for dev and testing modes, run `rake -D` for info.
   * Automatically publish to [GitHub pages](http://pages.github.com/)
     with [Travis CI](https://travis-ci.org/).
+  * [LiveReload](http://livereload.com/) support. Just run `guard`.
   * Use [Firebase](https://www.firebase.com/) to set up a remote control for your deck.
   * Slide notes using [Remodal](http://vodkabears.github.io/remodal/).
 
@@ -34,6 +35,7 @@ Lots of baked in features.
     just set `mathjax: true` in `_config.yml`.
   * Meta data system for SEO and social media:
     see `_data/meta.yml`.
+  * Complete favicon set from [Favic-o-matic](http://www.favicomatic.com/).
 
 ### Analytics and social features.
 
