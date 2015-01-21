@@ -35,6 +35,7 @@ Lots of baked in features.
     just set `mathjax: true` in `_config.yml`.
   * Meta data system for SEO and social media:
     see `_data/meta.yml`.
+  * Complete favicon set from [Favic-o-matic](http://www.favicomatic.com/).
 
 ### Analytics and social features.
 

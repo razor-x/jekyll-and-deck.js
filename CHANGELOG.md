@@ -2,6 +2,7 @@
 
 ## HEAD
 
+- Add favicon.
 - Add LiveReload support.
 - New Holo theme: a clean responsive style to help bootstrap your deck.
 
