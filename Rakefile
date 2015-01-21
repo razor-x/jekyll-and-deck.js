@@ -117,6 +117,7 @@ task :deploy => :build do
   end
 end
 
+# rake ghpages
 desc 'Generate site and publish to GitHub Pages.'
 task :ghpages do
   repo = %x(git config remote.origin.url).strip
@@ -138,6 +139,7 @@ task :ghpages do
   end
 end
 
+# rake travis
 desc 'Generate deck from Travis CI and publish to GitHub Pages.'
 task :travis do
   # if this is a pull request, do a simple build of the site and stop
