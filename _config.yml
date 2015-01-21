@@ -11,11 +11,15 @@ exclude:
   - VERSION
   - Gemfile.lock
   - Gemfile
+  - Guardfile
   - Rakefile
   - bower.json
   - bower_components
   - deck-*.zip
   - vendor
+
+livereload:
+  port: 35729
 
 gems:
   - jekyll-assets
