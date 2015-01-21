@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.2.1
+
+Version 1.2.0 introduced a change that would
+print your deploy token in the Travis CI build.
+
+If you suspect you were affected:
+**regenerate your personal access tokens!**
+
+- Hide secure token in deploy_url.
+
 ## 1.2.0
 
 - Add favicon.
