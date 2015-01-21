@@ -73,6 +73,13 @@ task :dev do
   spawn 'jekyll', 'serve', '--config', dev_config
 end
 
+# rake serve
+desc 'Start a local http server to host the deck.' + "\n" +
+     'Does not generate the deck. Use after running rake static.'
+task :serve do
+  spawn 'jekyll', 'serve', '--no-watch', '--skip-initial-build', '--config', dev_config
+end
+
 # rake deploy
 desc 'Deploy the site using rsync.'
 task :deploy => :build do
