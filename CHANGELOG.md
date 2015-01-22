@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.4
 
 - Smooth loading process.
 
