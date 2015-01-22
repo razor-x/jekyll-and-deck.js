@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.3
+
+- Update Google +1 Button code.
+- Update Facebook Like Button code.
+
 ## 1.2.2
 
 - Regenerate bower.json.
