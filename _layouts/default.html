@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width" />
   {% include meta.html %}
   {% include favicon.html %}
-  {% javascript head %}
-  <script>{% asset load.js %}</script>
+  <style type="text/css">{% asset loading %}</style>
+  {% javascript head async="true" %}
 </head>
 
-<body style="display:none;">
-  <div id="deck-loading_screen">
-    <h1><div class="spinner"></div>Loading Deck</h1>
+<body>
+  <div id="loading_screen">
+    <div class="spinner"></div><span>Loading Deck</span>
   </div>
   <article class="deck-container">
     {{ content }}
