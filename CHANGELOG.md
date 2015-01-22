@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Update Facebook Like Button code.
+
 ## 1.2.2
 
 - Regenerate bower.json.
