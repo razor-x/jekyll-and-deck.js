@@ -9,7 +9,8 @@
 $('.deck-container').hide()
 
 $(document).bind 'deck.init', ->
-  $('.deck-container').fadeIn()
+  $('#loading_screen').fadeOut 200, ->
+    $('.deck-container').fadeIn 800
 
   # Show social buttons after deck is loaded.
   <% if site.config['social'] %>
