@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.3
 
 - Update Google +1 Button code.
 - Update Facebook Like Button code.
