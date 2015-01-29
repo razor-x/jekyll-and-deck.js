@@ -15,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "MathJax": "2.4.0",
-    "bower-parseuri": "7e5161483bc1b03c6fbfd872f39073284bd014a2",
+    "bower-parseuri": "1.2.2",
     "css-spinners": "1.0.2",
     "deck.js": "1.1.0",
     "firebase": "2.1.1",
