@@ -8,39 +8,7 @@
 //= require deck.js/themes/transition/fade
 //= require deck.js/themes/style/web-2.0
 
-<% if site.config['social'] %>
-// Fix Twitter button positioning.
-iframe.twitter-share-button
-  display: inline-block
-  margin: 0
+@import notes
 
-// Hide social buttons until deck is loaded.
-aside.social-buttons
-  visibility: hidden
-
-  // Hide Google +1 button (it shows even if parent is hidden).
-  div.g-plus-container
-    display: inline-block
-    iframe
-      visibility: hidden !important
-
-  // Like button is misaligned because it sets vertical-align: bottom.
-  div.fb-like.fb_iframe_widget > span
-    vertical-align: initial !important
-<% end %>
-
-// Remodal adds padding-right which shifts slides.
-body
-  padding-right: 0 !important
-
-// Needed to show the notes since display: none is set.
-body.remodal_lock .remodal.notes
-  display: inline-block !important
-
-// Remodal close button will otherwise show unwanted underline.
-.remodal-overlay .remodal-close:hover
-  color: transparent
-
-// Remodal notes should not be centered.
-.notes ul
-  text-align: left
+// Load this when using social buttons.
+<%= '@import social-buttons' if site.config['social'] %>

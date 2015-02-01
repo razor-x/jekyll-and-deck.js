@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Simplify social button code.
+
 ## 1.2.4
 
 - Smooth loading process.
