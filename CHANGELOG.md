@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.5
 
 - Simplify social button code.
 
