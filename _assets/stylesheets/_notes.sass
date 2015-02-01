@@ -1,0 +1,15 @@
+// Remodal adds padding-right which shifts slides.
+body
+  padding-right: 0 !important
+
+// Needed to show the notes since display: none is set.
+body.remodal_lock .remodal.notes
+  display: inline-block !important
+
+// Remodal close button will otherwise show unwanted underline.
+.remodal-overlay .remodal-close:hover
+  color: transparent
+
+// Remodal notes should not be centered.
+.notes ul
+  text-align: left

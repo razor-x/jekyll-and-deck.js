@@ -1,0 +1,12 @@
+// Social Buttons
+aside.social-buttons
+  height: 22px
+
+  // Like button is misaligned because it sets vertical-align: bottom.
+  div.fb-like.fb_iframe_widget > span
+    vertical-align: initial !important
+
+  // Fix Twitter button positioning.
+  iframe.twitter-share-button
+    display: inline-block
+    margin: 0
