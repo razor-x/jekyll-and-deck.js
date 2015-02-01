@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.6
 
 - Update MathJax, Firebase, and Remodal.
 
