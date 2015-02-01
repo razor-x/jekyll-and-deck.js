@@ -14,17 +14,17 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "MathJax": "2.4.0",
+    "MathJax": "2.5.0",
     "bower-parseuri": "1.2.2",
     "css-spinners": "1.0.2",
     "deck.js": "1.1.0",
-    "firebase": "2.1.1",
+    "firebase": "2.1.2",
     "headjs": "1.0.3",
     "highlightjs": "8.4.0",
     "jquery": "2.1.3",
     "modernizr": "2.8.3",
     "normalize-css": "3.0.2",
-    "remodal": "0.4.1",
+    "remodal": "0.5.0",
     "webfontloader": "1.5.13"
   }
 }
