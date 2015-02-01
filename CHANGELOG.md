@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Update MathJax, Firebase, and Remodal.
+
 ## 1.2.5
 
 - Simplify social button code.
