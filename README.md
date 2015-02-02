@@ -11,6 +11,9 @@ Demo at [io.evansosenko.com/jekyll-and-deck.js/](https://io.evansosenko.com/jeky
 
 Lots of baked in features.
 
+If you like this, check out the sister project
+[Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
+
 ### Create your [deck.js](http://imakewebthings.com/deck.js/) deck with [Jekyll](http://jekyllrb.com/).
 
   * Basic [Rake](https://github.com/jimweirich/rake) tasks with support
