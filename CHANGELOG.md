@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.7
 
 - Fix Twitter button width bug.
 
