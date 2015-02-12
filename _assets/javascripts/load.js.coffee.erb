@@ -6,7 +6,9 @@ head.load "#{window.location.protocol}//#{window.location.hostname}:<%= site.con
 <% end %>
 <% end %>
 
+<% unless site.config['dev'] %>
 head.load '<%= site.asset_path "app.css" %>'
+<% end %>
 
 load_app = ->
   if <%= site.config['cdn']['libs'].transpose[1].join ' && ' %>
