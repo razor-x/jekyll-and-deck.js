@@ -16,7 +16,6 @@
   "dependencies": {
     "MathJax": "2.5.0",
     "bower-parseuri": "1.2.2",
-    "css-spinners": "1.0.2",
     "deck.js": "1.1.0",
     "firebase": "2.2.0",
     "headjs": "1.0.3",
@@ -25,6 +24,8 @@
     "modernizr": "2.8.3",
     "normalize-css": "3.0.2",
     "remodal": "0.6.3",
-    "webfontloader": "1.5.14"
+    "webfontloader": "1.5.14",
+    "deck.js-material": "razor-x/deck.js-material#v0.1.0-beta",
+    "material-design-preloader": "1.1.0"
   }
 }

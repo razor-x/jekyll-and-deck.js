@@ -5,6 +5,7 @@ description: Deck description
 keywords: [deck.js, talk]
 locale: en_US
 site_name: Site name
+color: "#3f51b5"
 
 # This meta data is optional.
 # determiner: null

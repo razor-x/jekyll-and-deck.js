@@ -60,3 +60,7 @@
 {% if meta.twitter.creator %}
   <meta name="twitter:creator" content="{{ meta.twitter.creator }}" />
 {% endif %}
+
+{% if site.data.meta.color %}
+  <meta name="theme-color" content="{{ meta.color }}">
+{% endif %}
