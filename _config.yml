@@ -43,7 +43,7 @@ assets:
 slide_tag: section
 
 # Set to true to load MathJax.
-mathjax: false
+mathjax: true
 
 # Use a CDN to load some libraries.
 # Libraries are loaded first, asynchronously,
