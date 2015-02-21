@@ -3,12 +3,16 @@
 // Add deck styles and transitions from deck.js/themes.
 //= require remodal
 //= require highlightjs/styles/default
-//= require css-spinners/css/spinner/spinner
 //= require deck.js/core/deck.core
 //= require deck.js/themes/transition/fade
-//= require deck.js/themes/style/web-2.0
 
+@import settings
 @import notes
 
 // Load this when using social buttons.
 <%= '@import social-buttons' if site.config['social'] %>
+
+@import bourbon
+@import neat
+@import deck.js/themes/style/reset
+@import deck.js-material

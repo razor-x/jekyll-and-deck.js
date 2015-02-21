@@ -1,17 +1,52 @@
 ---
 layout: default
 title: Deck Title
+author: Deck Author
+coauthors: []
+short_url: goo.gl/vb3c48
+src_url: https://github.com/razor-x/jekyll-and-deck.js
+author_url: https://evansosenko.com/
+logos:
+  - name: github
+    url: https://github.com/
 ---
+
+{% if page.short_url %}
+  <style>h2::after{content:"{{ page.short_url }}"};</style>
+{% endif %}
 
 {% slide header %}
   {% if site.firebase %}
-    <div style="text-align:center">
-      <button id="auth-login" style="display:none">login</button>
-      <button id="auth-logout" style="display:none">logout</button>
+    <div style="text-align:center;margin-top:1rem">
+      <button id="auth-login" style="display:none">login for deck control</button>
+      <button id="auth-logout" style="display:none">logout of deck control</button>
     </div>
   {% endif %}
 
   <h1>{{ page.title }}</h1>
+
+  {% if page.author %}
+    <ul class="authors">
+      <li class="author"><a href="{{ page.author_url }}">{{ page.author }}</a></li>
+    {% unless page.coauthors == empty %}
+      <li class"connector">with</li>
+    {% endunless %}
+    {% for coauthor in page.coauthors %}
+      <li class="author coauthor">{{ coauthor }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if page.short_url %}
+    <div class="url">
+      <div class="qrcode"></div>
+      <a class="short_url" href="https://{{ page.short_url }}">{{ page.short_url }}</a>
+    </div>
+  {% endif %}
+
+  {% for logo in page.logos %}
+    <a class="logo logo-{{ logo.name }}" href="{{ logo.url }}"></a>
+  {% endfor %}
 {% endslide %}
 
 {% slide %}
@@ -25,11 +60,23 @@ title: Deck Title
 {% slide footer %}
   <h2>Final slide</h2>
 
-  <p><a href='http://www.w3.org/html/logo/'>
-    {% image html5-badge-h-css3-semantics.png alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics" %}
-  </a></p>
-
-  {% if site.social %}
-    {% include social-buttons.html %}
+  <div class="footer">
+  {% if page.logo_url %}
+    <a class="logo" href="{{ page.logo_url }}"></a>
   {% endif %}
+    <ul class="colophon">
+      <li><a class="site_url" href="{{ page.author_url }}">{{ site.data.meta.site_name }}</a></li>
+    {% if page.src_url %}
+      <li><a class="src_url" href="{{ page.src_url }}">Source available on GitHub.</a></li>
+    {% endif %}
+    </ul>
+    <div class="web-colophon">
+      <a class="html5-badge" href="http://www.w3.org/html/logo/" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
+    {% if site.social %}
+      {% include social-buttons.html %}
+    {% endif %}
+    </div>
+  </div>
 {% endslide %}
+
+<div class="deck-status"><div class="deck-status-current"></div></div>

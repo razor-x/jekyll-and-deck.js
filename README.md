@@ -23,6 +23,7 @@ If you like this, check out the sister project
   * [LiveReload](http://livereload.com/) support. Just run `guard`.
   * Use [Firebase](https://www.firebase.com/) to set up a remote control for your deck.
   * Slide notes using [Remodal](http://vodkabears.github.io/remodal/).
+  * Includes the custom material theme: a clean responsive style to help bootstrap your deck.
 
 ### Asset pipeline with [Jekyll::AssetsPlugin](https://github.com/ixti/jekyll-assets).
 

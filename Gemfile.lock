@@ -3,6 +3,9 @@ GEM
   specs:
     addressable (2.3.7)
     blankslate (2.1.2.4)
+    bourbon (4.2.0)
+      sass (~> 3.4)
+      thor
     celluloid (0.16.0)
       timers (~> 4.0.0)
     classifier-reborn (2.0.3)
@@ -80,6 +83,9 @@ GEM
     mercenary (0.3.5)
     method_source (0.8.2)
     multi_json (1.10.1)
+    neat (1.7.1)
+      bourbon (>= 4.0)
+      sass (>= 3.3)
     nenv (0.2.0)
     notiffany (0.0.6)
       nenv (~> 0.1)
@@ -130,10 +136,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourbon (~> 4.2.0)
   coffee-script (~> 2.3.0)
   guard-livereload (~> 2.4.0)
   jekyll (~> 2.5.2)
   jekyll-assets (~> 0.13.0)
+  neat (~> 1.7.1)
   rake (~> 10.4.2)
   rubyzip (~> 1.1.0)
   sass (~> 3.4.3)
