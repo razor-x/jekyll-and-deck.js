@@ -1,13 +1,9 @@
 //= require normalize-css
 //= require material-design-preloader/md-preloader.min
 
-@import settings
-@import "deck.js-material/stylesheets/variables"
-
 html, body
   height: 100%
   overflow: hidden
-  +background-color
 
 .deck-container
   visibility: hidden
@@ -17,15 +13,12 @@ html, body
 
 #loading_screen,
 #loading_screen-no-js
-  display: flex
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
   height: 100%
+  display: flex
   align-items: center
   justify-content: center
-  font-family: "Roboto", "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
 
   span
-    margin-left: 1rem
     font-size: 4rem
-
-  .md-preloader svg circle
-    +loader-color
+    margin-left: 1rem

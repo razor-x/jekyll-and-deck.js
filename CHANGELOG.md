@@ -8,6 +8,7 @@
 
 ## 1.2.8
 
+- New material theme: a clean responsive style to help bootstrap your deck.
 - Travis CI optimizations.
 
 ## 1.2.7
