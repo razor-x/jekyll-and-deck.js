@@ -1,8 +1,8 @@
 # Jekyll & deck.js
 
-[![MIT License](https://img.shields.io/badge/license-MIT-red.svg?style=flat)](./LICENSE.txt)
-[![Dependency Status](https://img.shields.io/gemnasium/razor-x/jekyll-and-deck.js.svg?style=flat)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
-[![Build Status](https://img.shields.io/travis/razor-x/jekyll-and-deck.js/demo.svg?style=flat)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
+[![MIT License](https://img.shields.io/badge/license-MIT-red.svg)](./LICENSE.txt)
+[![Dependency Status](https://img.shields.io/gemnasium/razor-x/jekyll-and-deck.js.svg)](https://gemnasium.com/razor-x/jekyll-and-deck.js)
+[![Build Status](https://img.shields.io/travis/razor-x/jekyll-and-deck.js/demo.svg)](https://travis-ci.org/razor-x/jekyll-and-deck.js)
 
 Source for your deck running on Jekyll and deck.js.
 Just clone and deck.
