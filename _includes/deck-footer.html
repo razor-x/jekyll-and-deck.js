@@ -1,0 +1,22 @@
+{% assign deck = site.data.deck %}
+
+{% if deck.end %}<h1>{{ deck.end }}</h1>{% endif %}
+
+<div class="footer">
+{% for logo in deck.logos %}
+  <a class="logo logo-{{ logo.name }}" href="{{ logo.url }}"></a>
+{% endfor %}
+  <ul class="colophon">
+  {% if deck.author.url %}
+    <li><a class="site_url" href="{{ deck.author.url }}">{{ deck.author.site_name }}</a></li>
+  {% endif %}
+  {% if deck.source.url %}
+    <li><a class="source.url" href="{{ deck.source.url }}">{{ deck.source.text }}</a></li>
+  {% endif %}
+  </ul>
+  <div class="web-colophon">
+  {% if site.social %}
+    {% include social-buttons.html %}
+  {% endif %}
+  </div>
+</div>
