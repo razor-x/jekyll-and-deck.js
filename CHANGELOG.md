@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.8
 
 - Travis CI optimizations.
 
