@@ -3,7 +3,7 @@ GEM
   specs:
     addressable (2.3.7)
     blankslate (2.1.2.4)
-    bourbon (4.2.0)
+    bourbon (4.2.1)
       sass (~> 3.4)
       thor
     celluloid (0.16.0)
