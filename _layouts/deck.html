@@ -2,10 +2,6 @@
 layout: default
 ---
 
-{% if site.data.deck.short_url %}
-  <style>h2::after{content:"{{ site.data.deck.short_url }}"};</style>
-{% endif %}
-
 {% slide header %}
   {% include deck-firebase.html %}
   {% include deck-header.html %}
