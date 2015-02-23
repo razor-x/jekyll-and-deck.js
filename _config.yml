@@ -8,7 +8,6 @@ exclude:
   - CHANGELOG.md
   - LICENSE.txt
   - README.md
-  - VERSION
   - Gemfile.lock
   - Gemfile
   - Guardfile
