@@ -1,0 +1,15 @@
+{% if deck.author.name %}
+  <ul class="authors">
+    <li class="author">
+      {% if deck.author.url %}<a href="{{ deck.author.url }}">{% endif %}{{ deck.author.name }}{% if deck.author.url %}</a>{% endif %}
+    </li>
+  {% unless deck.coauthors == empty %}
+    {% if deck.coauthor_connector %}<li class"connector">{{ deck.coauthor_connector }}</li>{% endif %}
+  {% endunless %}
+  {% for coauthor in deck.coauthors %}
+    <li class="author coauthor">
+      {% if coauthor.url %}<a href="{{ coauthor.url }}">{% endif %}{{ coauthor.name }}{% if coauthor.url %}</a>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+{% endif %}

@@ -1,0 +1,7 @@
+{% unless deck.logos == empty %}
+  <div class="logos">
+  {% for logo in deck.logos %}
+    <a class="logo logo-{{ logo.name }}" href="{{ logo.url }}"></a>
+  {% endfor %}
+  </div>
+{% endunless %}
