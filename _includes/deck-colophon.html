@@ -1,0 +1,8 @@
+<ul class="colophon">
+{% if deck.author.url %}
+  <li><a class="site_url" href="{{ deck.author.url }}">{{ deck.author.site_name }}</a></li>
+{% endif %}
+{% if deck.source.url %}
+  <li><a class="source.url" href="{{ deck.source.url }}">{{ deck.source.text }}</a></li>
+{% endif %}
+</ul>

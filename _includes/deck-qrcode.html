@@ -1,0 +1,6 @@
+{% if deck.short_url %}
+  <div class="url">
+    <div class="qrcode"></div>
+    <a class="short_url" href="https://{{ deck.short_url }}">{{ deck.short_url }}</a>
+  </div>
+{% endif %}
