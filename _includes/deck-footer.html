@@ -3,9 +3,13 @@
 {% if deck.end %}<h1>{{ deck.end }}</h1>{% endif %}
 
 <div class="footer">
-{% for logo in deck.logos %}
-  <a class="logo logo-{{ logo.name }}" href="{{ logo.url }}"></a>
-{% endfor %}
+  {% unless deck.logos == empty %}
+    <div class="logos">
+    {% for logo in deck.logos %}
+      <a class="logo logo-{{ logo.name }}" href="{{ logo.url }}"></a>
+    {% endfor %}
+    </div>
+  {% endunless %}
   <ul class="colophon">
   {% if deck.author.url %}
     <li><a class="site_url" href="{{ deck.author.url }}">{{ deck.author.site_name }}</a></li>
