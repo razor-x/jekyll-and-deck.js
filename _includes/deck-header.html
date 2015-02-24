@@ -6,33 +6,6 @@
 
 {% if deck.title %}<h1>{{ deck.title }}</h1>{% endif %}
 
-{% if deck.author.name %}
-  <ul class="authors">
-    <li class="author">
-      {% if deck.author.url %}<a href="{{ deck.author.url }}">{% endif %}{{ deck.author.name }}{% if deck.author.url %}</a>{% endif %}
-    </li>
-  {% unless deck.coauthors == empty %}
-    {% if deck.coauthor_connector %}<li class"connector">{{ deck.coauthor_connector }}</li>{% endif %}
-  {% endunless %}
-  {% for coauthor in deck.coauthors %}
-    <li class="author coauthor">
-      {% if coauthor.url %}<a href="{{ coauthor.url }}">{% endif %}{{ coauthor.name }}{% if coauthor.url %}</a>{% endif %}
-    </li>
-  {% endfor %}
-  </ul>
-{% endif %}
-
-{% if deck.short_url %}
-  <div class="url">
-    <div class="qrcode"></div>
-    <a class="short_url" href="https://{{ deck.short_url }}">{{ deck.short_url }}</a>
-  </div>
-{% endif %}
-
-{% unless deck.logos == empty %}
-  <div class="logos">
-  {% for logo in deck.logos %}
-    <a class="logo logo-{{ logo.name }}" href="{{ logo.url }}"></a>
-  {% endfor %}
-  </div>
-{% endunless %}
+{% include deck-authors.html %}
+{% include deck-qrcode.html %}
+{% include deck-logos.html %}
