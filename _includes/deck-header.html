@@ -1,9 +1,5 @@
 {% assign deck = site.data.deck %}
 
-{% if deck.short_url %}
-  <style>h2::after{content:"{{ deck.short_url }}"};</style>
-{% endif %}
-
 {% if deck.title %}<h1>{{ deck.title }}</h1>{% endif %}
 
 {% include deck-authors.html %}
