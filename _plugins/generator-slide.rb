@@ -34,9 +34,9 @@ module Jekyll
       result = ''
       result << %Q{<#{@slide_tag}#{id} class="slide#{classes}">}
       result << "<#{@slide_title_tag}>#{@title}</#{@slide_title_tag}>" unless @title.empty?
-      result << %{<div class="content">}
+      result << %{<div class="content">} unless @title.empty?
       result << super
-      result << '</div>'
+      result << '</div>' unless @title.empty?
       result << "</#{@slide_tag}>"
     end
   end
