@@ -14,10 +14,10 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "MathJax": "2.5.0",
+    "MathJax": "2.5.1",
     "bower-parseuri": "1.2.2",
     "deck.js": "1.1.0",
-    "firebase": "2.2.0",
+    "firebase": "2.2.1",
     "headjs": "1.0.3",
     "highlightjs": "8.4.0",
     "jquery": "2.1.3",
