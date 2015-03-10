@@ -1,8 +1,11 @@
 # Changelog
 
-## 1.2.8
+## HEAD
 
 - New material theme: a clean responsive style to help bootstrap your deck.
+
+## 1.2.8
+
 - Travis CI optimizations.
 
 ## 1.2.7
