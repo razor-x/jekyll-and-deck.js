@@ -2,13 +2,10 @@
 
 ## HEAD
 
-- Travis CI deployment now uses deploy keys instead of personal access tokens.
-  If you use this feature you must follow the new setup instructions.
 - New material theme: a clean responsive style to help bootstrap your deck.
 
 ## 1.2.8
 
-- New material theme: a clean responsive style to help bootstrap your deck.
 - Travis CI optimizations.
 
 ## 1.2.7
