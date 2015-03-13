@@ -11,7 +11,6 @@ sudo: false
 before_script:
   - npm install -g bower
   - bower install
-  - bower update
 
 # Install the travis gem.
 # Create a deploy key and encrypt it with:
