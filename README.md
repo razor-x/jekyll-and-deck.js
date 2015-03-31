@@ -117,11 +117,21 @@ The `master` branch otherwise functions like the `gh-pages` branch below.
 
 [See here](http://pages.github.com/) for details on the different use cases.
 
-First, make a `gh-pages` branch unless you are using `master` as discussed above.
+First, make a `gh-pages` branch unless you are using `master` as discussed above,
+
 ````bash
 $ git checkout --orphan gh-pages
 ````
-then make an initial commit, push it, and make sure it goes live online.
+
+and **remove all files and folders except the `.git` directory**.
+
+````bash
+$ git reset .
+$ git clean -fdx
+````
+
+Then, make an initial commit with only `index.html`, push it, and make sure it goes live online.
+
 ````bash
 $ echo "GitHub Pages placeholder" > index.html
 $ git add index.html
