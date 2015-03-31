@@ -4,29 +4,29 @@
 # The included variables are used in the default deck layouts.
 # Uncomment and customize them as desired.
 
-# title: Jekyll & Deck.js
-# end: "{ end }"
+title: Jekyll & Deck.js
+end: "{ end }"
 
-# author:
-#  name: Evan Sosenko
-#  site_name: evansosenko.com
-#  url: https://evansosenko.com/
+author:
+ name: Evan Sosenko
+ site_name: evansosenko.com
+ url: https://evansosenko.com/
 
-# source:
-#  url: https://github.com/razor-x/jekyll-and-deck.js
-#  text: Source available on GitHub.
+source:
+ url: https://github.com/razor-x/jekyll-and-deck.js
+ text: Source available on GitHub.
 
-# coauthor_connector: with
-# coauthors:
-#  - name: Octocat
-#    url: https://octodex.github.com/
+coauthor_connector: with
+coauthors:
+ - name: Octocat
+   url: https://octodex.github.com/
 
 # Generate your own short url and put it here.
 # Optionally, add qr.png and qr_2x.png and set $qrcode: true in _settings.scss.
-# short_url: goo.gl/vb3c48
+short_url: goo.gl/vb3c48
 
 # Add corresponding logo image files
 # and update the $logos variable in _settings.scss.
-# logos:
-#  - name: github
-#    url: https://github.com/
+logos:
+ - name: github
+   url: https://github.com/
