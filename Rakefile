@@ -130,10 +130,10 @@ task :ghpages do
   Dir.mktmpdir do |dir|
     sh "git clone --branch #{deploy_branch} #{repo} #{dir}"
     sh 'bundle exec rake build'
-    sh %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" #{destination} #{dir})
+    sh %Q(rsync -rt --delete-after --exclude=".git" --exclude=".nojekyll" --exclude=".deploy_key*" #{destination} #{dir})
     Dir.chdir dir do
       sh 'git add --all'
-      sh "git commit -m 'Built from #{rev}'"
+      sh "git commit -m 'Built from #{rev}'."
       sh 'git push'
     end
   end
@@ -149,8 +149,14 @@ task :travis do
     next
   end
 
-  repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:').strip
-  deploy_url = repo.gsub %r{https://}, "https://#{ENV['GH_TOKEN']}@"
+  verbose false do
+    sh 'chmod 600 .deploy_key'
+    sh 'ssh-add .deploy_key'
+  end
+
+  repo = %x(git config remote.origin.url)
+         .gsub(%r{^git://}, 'git@')
+         .sub(%r{/}, ':').strip
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
   rev = %x(git rev-parse HEAD).strip
 
@@ -159,7 +165,7 @@ task :travis do
     sh 'bundle exec rake build'
     fail "Build failed." unless Dir.exists? destination
     sh "git clone --branch #{deploy_branch} #{repo} #{dir}"
-    sh %Q(rsync -rt --del --exclude=".git" --exclude=".nojekyll" #{destination} #{dir})
+    sh %Q(rsync -rt --del --exclude=".git" --exclude=".nojekyll" --exclude=".deploy_key*" #{destination} #{dir})
     Dir.chdir dir do
       # setup credentials so Travis CI can push to GitHub
       verbose false do
@@ -169,8 +175,9 @@ task :travis do
 
       sh 'git add --all'
       sh "git commit -m 'Built from #{rev}'."
+
       verbose false do
-        sh "git push -q #{deploy_url} #{deploy_branch}"
+        sh "git push -q #{repo} #{deploy_branch}"
       end
     end
   end
