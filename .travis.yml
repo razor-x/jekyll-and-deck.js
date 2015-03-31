@@ -1,6 +1,6 @@
 ---
 language: [ ruby, node_js ]
-rvm: [ 2.2.0 ]
+rvm: [ 2.2.1 ]
 node_js: [ 0.12 ]
 cache:
   bundler: true
@@ -12,7 +12,14 @@ before_script:
   - npm install -g bower
   - bower install
 
+# Install the travis gem.
+# Create a deploy key and encrypt it with:
+# $ travis encrypt-file deploy_key.pem
+# Commit the encrypted file and
+# replace the first command below with the generated one.
 before_install:
+  - openssl aes-256-cbc -K $encrypted_843694bda23e_key -iv $encrypted_843694bda23e_iv -in .deploy_key.enc -out .deploy_key -d
+  - eval "$(ssh-agent)"
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 
 script: bundle exec rake travis
@@ -22,10 +29,8 @@ branches:
   only:
     - demo
 
-# Create a GitHub Personal Access Token.
-# Install the travis gem.
-# Run the command below (fill in your name, email, and token):
-# $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com GH_TOKEN=token'
+# Run the command below (fill in your name and email):
+# $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
 # Replace the value of secure with your generated value.
 env:
-  - secure: "TFEHFIyDWOUmvWbq469CAk4ZZjnSdT1HWYumBnFjE6Fs9671VuTWVrWoevKx2HiZVGOMRHW4CQMBarrcvaR2dV5liIC8nzMQXPp7tQE+gOQuET8SUIqa4h2eDzaNGAXT66HWLajHdw/q1qrLDbm3IQeDy1H0P2AOn6vFZWKe48U="
+  - secure: "HflX2eY2OvmG6dx5lcWJoAkTJLAaM1LWnYnUkzzqFm9tFoiQAxtzF2drHVD8wBisKPFD7eMKQd9WAsHIBfa1CJnqVFLGpBBOCBg+spNP37UhVvB6vsxXYBhrqB3nNrhffNWp0tOzeO5JxWQqQVSshyAtGJ5MRw8HEUMIeotPVvg="
