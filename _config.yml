@@ -1,7 +1,7 @@
 ---
 # Jekyll options.
-domain: https://razor-x.github.io/jekyll-and-deck.js
-baseurl: https://razor-x.github.io/jekyll-and-deck.js
+domain: https://io.evansosenko.com/jekyll-and-deck.js
+baseurl: https://io.evansosenko.com/jekyll-and-deck.js
 markdown: redcarpet
 highlighter: pygments
 exclude:
@@ -29,7 +29,7 @@ gems:
 
 # Jekyll::AssetsPlugin options.
 assets:
-  baseurl: https://razor-x.github.io/jekyll-and-deck.js/assets/
+  baseurl: https://io.evansosenko.com/jekyll-and-deck.js/assets/
   sources:
     - _assets/images
     - _assets/javascripts
@@ -45,7 +45,7 @@ assets:
 slide_tag: section
 
 # Set to true to load MathJax.
-mathjax: false
+mathjax: true
 
 # Use a CDN to load some libraries.
 # Libraries are loaded first, asynchronously,
