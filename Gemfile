@@ -12,7 +12,7 @@ gem 'jekyll', '~> 2.5.2'
 gem 'jekyll-assets', '~> 0.14.0'
 gem 'sass', '~> 3.4.3'
 gem 'uglifier', '~> 2.7.0'
-gem 'coffee-script', '~> 2.3.0'
+gem 'coffee-script', '~> 2.4.1'
 gem 'bourbon', '~> 4.2.0'
 gem 'neat', '~> 1.7.1'
 
