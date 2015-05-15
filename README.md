@@ -56,9 +56,9 @@ You will need Ruby ≥ 2 with [Bundler](http://bundler.io/) and [Bower](http://b
 
 Just clone this with
 
-````bash
+```bash
 $ git clone https://github.com/razor-x/jekyll-and-deck.js.git my-deck
-````
+```
 
 run `bundle && bower install` and make your deck in `index.haml`.
 Head over to the [Jekyll Docs](http://jekyllrb.com/docs/home/) and [deck.js docs](http://imakewebthings.com/deck.js/docs/) for the rest of the details.
@@ -85,29 +85,29 @@ Demo deck hosted on GitHub pages:
 If you want to merge in future updates from this project and have your own origin,
 set up a separate branch to track this.
 
-````bash
+```bash
 $ git remote rename origin upstream
 $ git branch jekyll-and-deck.js
 $ git branch -u upstream/master jekyll-and-deck.js
-````
+```
 
 Then add an origin and push master
 
-````bash
+```bash
 $ git remote add origin git@github.com:username/my-deck.git
 $ git push -u origin master
-````
+```
 
 Now, the `jekyll-and-deck.js` branch will pull changes from this project,
 which you can then merge into your other branches.
 
 If you later clone your repo you will need to create the update branch again.
 
-````bash
+```bash
 $ git remote add upstream https://github.com/razor-x/jekyll-and-deck.js.git
 $ git fetch upstream
 $ git checkout -b jekyll-and-deck.js upstream/master
-````
+```
 
 ## Automatic publishing to GitHub pages with Travis CI
 
@@ -119,40 +119,40 @@ The `master` branch otherwise functions like the `gh-pages` branch below.
 
 First, make a `gh-pages` branch unless you are using `master` as discussed above,
 
-````bash
+```bash
 $ git checkout --orphan gh-pages
-````
+```
 
 and **remove all files and folders except the `.git` directory**.
 
-````bash
+```bash
 $ git reset .
 $ git clean -fdx
-````
+```
 
 Then, make an initial commit with only `index.html`, push it, and make sure it goes live online.
 
-````bash
+```bash
 $ echo "GitHub Pages placeholder" > index.html
 $ git add index.html
 $ git commit -m "GitHub Pages placeholder"
 $ git push -u origin gh-pages
 $ git checkout master
-````
+```
 
 Next, install the travis gem,
 
-````bash
+```bash
 $ gem install travis
-````
+```
 
 create a [GitHub Deploy Key](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys),
 and name the private key `.deploy_key`.
 Encrypt it with
 
-````bash
+```bash
 $ travis encrypt-file .deploy_key
-````
+```
 
 Commit the encrypted file `.deploy_key.enc` and replace
 the first `before_install` command in `.travis.yml` with the generated one.
@@ -160,20 +160,27 @@ the first `before_install` command in `.travis.yml` with the generated one.
 Add your name, and email to travis as encrypted data
 (fill in your values in the command below),
 
-````bash
+```bash
 $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
-````
+```
 
 and replace the secure string in `.travis.yml` with the one you just got;
 also set the branch you want to build (normally `master`, see the comments in that file).
 
 Finally, switch on your repo in Travis CI and push your changes.
 
-````bash
+```bash
 $ git add .travis.yml
 $ git commit -m "Automatic publishing to GitHub pages with Travis CI."
 $ git push
-````
+```
+
+### Staging site
+
+If the environment variable `JEKYLL_STAGING_URL` is set,
+then this value will be used to set `domain`, `baseurl`, and the assets `baseurl`.
+This is useful when you want to setup a staging site
+on a separate development repository.
 
 ## Updating
 
