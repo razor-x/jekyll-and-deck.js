@@ -11,6 +11,7 @@ config = YAML.load_file '_config.yml'
 local_config = '_config.yml,_config.local.yml'
 static_config = '_config.yml,_config.static.yml'
 dev_config = '_config.yml,_config.dev.yml'
+staging_config = '_config.yml,_config.staging.yml'
 
 config[:destination] ||= '_site/'
 destination = File.join config[:destination], '/'
@@ -33,7 +34,11 @@ end
 # rake build
 desc 'Generate the deck.'
 task :build do
-  sh 'bundle', 'exec', 'jekyll', 'build'
+  if File.exists? '_config.staging.yml'
+    sh 'bundle', 'exec', 'jekyll', 'build', '--config', staging_config
+  else
+    sh 'bundle', 'exec', 'jekyll', 'build'
+  end
 end
 
 # rake static
@@ -149,6 +154,15 @@ task :travis do
     next
   end
 
+  # generate a staging config if set in environment
+  url = ENV['JEKYLL_STAGING_URL'].to_s
+  unless url.empty?
+    puts 'Creating _config.staging.yml.'
+    staging = {'domain' => url, 'baseurl' => url,
+               'assets' => {'baseurl' => "#{url}/assets"}}
+    File.open('_config.staging.yml','w') { |f| f.write staging.to_yaml }
+  end
+
   verbose false do
     sh 'chmod 600 .deploy_key'
     sh 'ssh-add .deploy_key'
@@ -171,6 +185,13 @@ task :travis do
       verbose false do
         sh "git config user.name '#{ENV['GIT_NAME']}'"
         sh "git config user.email '#{ENV['GIT_EMAIL']}'"
+      end
+
+      # overwrite robots.txt if staging site
+      unless url.empty?
+        puts 'Creating robots.txt for staging site.'
+        robots_txt = "User-agent: *\nDisallow: /\n"
+        File.open('robots.txt','w') { |f| f.write robots_txt }
       end
 
       sh 'git add --all'
