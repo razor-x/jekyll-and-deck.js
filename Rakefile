@@ -31,7 +31,7 @@ def spawn *cmd
 end
 
 # rake build
-desc 'Generate the deck.'
+desc 'Generate the deck'
 task :build do
   if File.exists? '_config.staging.yml'
     sh 'bundle', 'exec', 'jekyll', 'build', '--config', staging_config
@@ -41,13 +41,13 @@ task :build do
 end
 
 # rake static
-desc 'Generate the deck for portable static offline viewing.'
+desc 'Generate the deck for portable static offline viewing'
 task :static do
   sh 'bundle', 'exec', 'jekyll', 'build', '--config', static_config
 end
 
 # rake zip
-desc 'Generate a portable zip of the deck for static offline viewing.'
+desc 'Generate a portable zip of the deck for static offline viewing'
 task :zip => [:static] do
   title = YAML.load_file(File.join('_data', 'meta.yml'))['title']
   title = "deck-#{title.gsub(' ', '_').downcase}"
@@ -62,30 +62,30 @@ task :zip => [:static] do
 end
 
 # rake deck
-desc 'Generate the deck and start a server (for presenting locally).' + "\n" +
-     'Load local resources to work offline, no auto generate.' + "\n" +
-     'Loads _config.local.yml as an additional config file.'
+desc 'Generate the deck and start a server (for presenting locally):' + "\n" +
+     'loads local resources to work offline, no auto generate;' + "\n" +
+     'loads _config.local.yml as an additional config file'
 task :deck do
   spawn 'jekyll', 'serve', '--no-watch', '--config', local_config
 end
 
 # rake dev
-desc 'Start a server and watch the deck for changes (for development).' + "\n" +
-     'For performance, use MathJax CDN only (if enabled).' + "\n" +
-     'Loads _config.dev.yml as an additional config file.'
+desc 'Start a server and watch the deck for changes (for development),' + "\n" +
+     'for performance, use MathJax CDN only (if enabled):' + "\n" +
+     'loads _config.dev.yml as an additional config file'
 task :dev do
   spawn 'jekyll', 'serve', '--config', dev_config
 end
 
 # rake serve
-desc 'Start a local http server to host the deck.' + "\n" +
-     'Does not generate the deck. Use after running rake static.'
+desc 'Start a local http server to host the deck:' + "\n" +
+     'does not generate the deck; use after running rake static'
 task :serve do
   spawn 'jekyll', 'serve', '--no-watch', '--skip-initial-build', '--config', dev_config
 end
 
 # rake deploy
-desc 'Deploy the site using rsync.'
+desc 'Deploy the site using rsync'
 task deploy: [:build] do
   fail 'Error: must add :depoly: section to _config.yml.' if config[:deploy].nil?
 
@@ -123,7 +123,7 @@ task deploy: [:build] do
 end
 
 # rake ghpages
-desc 'Generate site and publish to GitHub Pages.'
+desc 'Generate site and publish to GitHub Pages'
 task :ghpages do
   repo = %x(git config remote.origin.url).strip
   deploy_branch = repo.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
@@ -145,7 +145,7 @@ task :ghpages do
 end
 
 # rake travis
-desc 'Generate deck from Travis CI and publish to GitHub Pages.'
+desc 'Generate deck from Travis CI and publish to GitHub Pages'
 task :travis do
   # if this is a pull request, do a simple build of the site and stop
   if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
