@@ -1,11 +1,10 @@
-# Standard library
 require 'fileutils'
 require 'rake'
 require 'tmpdir'
 require 'yaml'
 require 'zip'
 
-# Load the configuration file
+# Load the configuration file.
 config = YAML.load_file '_config.yml'
 
 local_config = '_config.yml,_config.local.yml'
@@ -16,10 +15,10 @@ staging_config = '_config.yml,_config.staging.yml'
 config[:destination] ||= '_site/'
 destination = File.join config[:destination], '/'
 
-# Set "rake build" as default task
+# Set "rake build" as default task.
 task :default => :build
 
-# Spawn a server and kill it gracefully when interrupt is received
+# Spawn a server and kill it gracefully when interrupt is received.
 def spawn *cmd
   pid = Process.spawn 'bundle', 'exec', *cmd
 
