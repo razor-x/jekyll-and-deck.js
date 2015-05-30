@@ -23,9 +23,3 @@ before_install:
   - 'echo ''gem: --no-document'' > ~/.gemrc'
 
 script: bundle exec rake travis
-
-# Run the command below (fill in your name and email):
-# $ travis encrypt 'GIT_NAME="Your Name" GIT_EMAIL=you@example.com'
-# Replace the value of secure with your generated value.
-env:
-  - secure: "RtdbXXjM7SmhYBkhlHGxrJ2q5qTxFm/dhdMes62cVkl0kgxJlmKDPyT67H4u2xF2H9hzZ9BBn4VgXF/PPbJ1fWwt/VOmmMtWE8dmVDtkqlQOh7l/S23dyx7WUBR0yRCXr6tZeN+YaNpLZ71vY/az3t5ayrlzeBNdpkuF9vrPz5c="
