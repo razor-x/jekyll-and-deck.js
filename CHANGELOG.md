@@ -2,10 +2,15 @@
 
 ## HEAD
 
+- Switch to using [rake-jekyll] for git based deployment.
+  You may now set the `SOURCE_BRANCH` environment variable
+  to enable testing on all other branches.
 - Add staging environment support for Travis CI builds.
 - Travis CI deployment now uses deploy keys instead of personal access tokens.
   If you use this feature you must follow the new setup instructions.
 - New material theme: a clean responsive style to help bootstrap your deck.
+
+[rake-jekyll]: https://github.com/jirutka/rake-jekyll
 
 ## 1.2.8
 
