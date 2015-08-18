@@ -1,16 +1,20 @@
 ---
-language: [ ruby, node_js ]
-rvm: [ 2.2.2 ]
-node_js: [ iojs ]
+language:
+  - ruby
+  - node_js
+rvm:
+  - 2.2.2
+node_js:
+  - iojs-v2.5.0
 cache:
   bundler: true
   directories:
     - bower_components
+    - node_modules
 sudo: false
 
 before_script:
-  - npm install -g bower
-  - bower install
+  - npm install
 
 # Install the travis gem.
 # Create a deploy key and encrypt it with:

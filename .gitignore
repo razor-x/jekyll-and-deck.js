@@ -1,5 +1,7 @@
 .jekyll-assets-cache/
 .sass-cache/
+npm-debug.log
 *.zip
 _site/
 bower_components/
+node_modules/

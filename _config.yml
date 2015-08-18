@@ -14,6 +14,7 @@ exclude:
   - Rakefile
   - bower.json
   - bower_components
+  - node_modules
   - deck-*.zip
   - vendor
 
