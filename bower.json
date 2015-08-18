@@ -17,14 +17,14 @@
     "MathJax": "2.5.3",
     "bower-parseuri": "1.2.2",
     "deck.js": "1.1.0",
-    "firebase": "2.2.4",
+    "firebase": "2.2.9",
     "headjs": "1.0.3",
-    "highlightjs": "8.5.0",
+    "highlightjs": "8.7.0",
     "jquery": "2.1.4",
     "modernizr": "2.8.3",
     "normalize-css": "3.0.3",
     "remodal": "0.6.4",
-    "webfontloader": "1.5.18",
+    "webfontloader": "1.6.6",
     "deck.js-material": "1.0.0-beta",
     "material-design-preloader": "1.1.1"
   }
