@@ -23,10 +23,10 @@ livereload:
 
 gems:
   - jekyll-assets
-  - jekyll-assets/bourbon
-  - jekyll-assets/neat
   - sass
   - coffee_script
+  - bourbon
+  - neat
 
 # Jekyll::AssetsPlugin options.
 assets:
