@@ -6,6 +6,7 @@
   You may now set the `SOURCE_BRANCH` environment variable
   to enable testing on all other branches.
 - Add staging environment support for Travis CI builds.
+- Set staging site CNAME with `CNAME` environment variable.
 - Travis CI deployment now uses deploy keys instead of personal access tokens.
   If you use this feature you must follow the new setup instructions.
 - Deploy keys can be overridden via the `DEPLOY_KEY`
