@@ -2,17 +2,16 @@
 
 ## HEAD
 
+- New material theme: a clean responsive style to help bootstrap your deck.
+- Travis CI deployment now uses deploy keys instead of personal access tokens.
+  If you use this feature you must follow the new setup instructions.
+- Deploy keys can be overridden via the `DEPLOY_KEY`
+  environment variable.
 - Switch to using [rake-jekyll] for git based deployment.
   You may now set the `SOURCE_BRANCH` environment variable
   to enable testing on all other branches.
 - Add staging environment support for Travis CI builds.
 - Set staging site CNAME with `CNAME` environment variable.
-- Travis CI deployment now uses deploy keys instead of personal access tokens.
-  If you use this feature you must follow the new setup instructions.
-- Deploy keys can be overridden via the `DEPLOY_KEY`
-  environment variable.
-- New material theme: a clean responsive style to help bootstrap your deck.
-- Use io.js v2.5.0.
 - Optimize Travis build by adding bower to package.json.
 
 [rake-jekyll]: https://github.com/jirutka/rake-jekyll
