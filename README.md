@@ -14,6 +14,12 @@ Lots of baked in features.
 If you like this, check out the sister project
 [Jekyll & ZURB](https://github.com/razor-x/jekyll-and-zurb).
 
+**Version 2 is the last stable release** and will remain on Jekyll 2.
+Only bug fixes and security patches will be accepted.
+
+For new decks, checkout my new
+[Bespoke.js deck skeleton powered by Brunch and awesome.](https://github.com/makenew/deck-bespoke.js)
+
 ### Create your [deck.js](http://imakewebthings.com/deck.js/) deck with [Jekyll](http://jekyllrb.com/).
 
   * Basic [Rake](https://github.com/jimweirich/rake) tasks with support
