@@ -1,5 +1,9 @@
 # Changelog
 
+## HEAD
+
+- Fix how Node.js is handled on Travis.
+
 ## 2.0.0
 
 - New material theme: a clean responsive style to help bootstrap your deck.
