@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.0.1
 
 - Fix how Node.js is handled on Travis.
 - Bump deck.js-material version.
