@@ -55,7 +55,7 @@ cdn_enabled: true
 cdn:
   # [ url, loaded check, local asset fallback path ]
   libs:
-    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
+    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
 
 # Uncomment below to use Firebase as a deck remote.
 firebase: https://jekyll-and-deck-js.firebaseio.com/

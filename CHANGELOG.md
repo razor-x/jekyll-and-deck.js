@@ -13,6 +13,7 @@
 - Add staging environment support for Travis CI builds.
 - Set staging site CNAME with `CNAME` environment variable.
 - Optimize Travis build by adding bower to package.json.
+- Bump most dependency versions.
 
 [rake-jekyll]: https://github.com/jirutka/rake-jekyll
 
