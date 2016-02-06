@@ -3,6 +3,7 @@
 ## HEAD
 
 - Fix how Node.js is handled on Travis.
+- Bump deck.js-material version.
 
 ## 2.0.0
 
