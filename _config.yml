@@ -14,6 +14,7 @@ exclude:
   - Rakefile
   - bower.json
   - bower_components
+  - node_modules
   - deck-*.zip
   - vendor
 
@@ -22,10 +23,10 @@ livereload:
 
 gems:
   - jekyll-assets
-  - jekyll-assets/bourbon
-  - jekyll-assets/neat
   - sass
   - coffee_script
+  - bourbon
+  - neat
 
 # Jekyll::AssetsPlugin options.
 assets:
@@ -54,7 +55,7 @@ cdn_enabled: true
 cdn:
   # [ url, loaded check, local asset fallback path ]
   libs:
-    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
+    - [ "https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js", "window.jQuery", "jquery/dist/jquery" ]
 
 # Uncomment below to use Firebase as a deck remote.
 firebase: https://jekyll-and-deck-js.firebaseio.com/
@@ -80,19 +81,19 @@ firebase: https://jekyll-and-deck-js.firebaseio.com/
 #     enabled: true
 
 # Uncomment below to enable deploy.
-# :deploy:
+# deploy:
 #   # only :rsync supported
-#   :protocol: :rsync
+#   protocol: :rsync
 #   # domain name
-#   :server: example.com
+#   server: example.com
 #   # remote username
-#   :user: www
+#   user: www
 #   # remote port
-#   :port: 22
+#   port: 22
 #   # path to remote folder where contents of _site should go
 #   # must have trailing slash
-#   :path: /var/www/example.com/htdocs/
+#   path: /var/www/example.com/htdocs/
 #   # site files and folders that should be uploaded but not synced
 #   # remote content will not be removed from these files and folders
-#   :upload_only:
+#   upload_only:
 #     - content/

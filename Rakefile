@@ -1,22 +1,17 @@
-require 'fileutils'
-require 'rake'
 require 'rake-jekyll'
-require 'tmpdir'
 require 'yaml'
 require 'zip'
 
 # Load the configuration file.
 config = YAML.load_file '_config.yml'
 
+# Set environment config file combinations.
 local_config = '_config.yml,_config.local.yml'
 static_config = '_config.yml,_config.static.yml'
 dev_config = '_config.yml,_config.dev.yml'
 
-config[:destination] ||= '_site/'
-destination = File.join config[:destination], '/'
-
-# Set "rake build" as default task.
-task default: [:build]
+# Set staging environment config file name.
+staging_config_file = '_config.staging.yml'
 
 # Spawn a server and kill it gracefully when interrupt is received.
 def spawn *cmd
@@ -24,28 +19,44 @@ def spawn *cmd
 
   switch = true
   Signal.trap 'SIGINT' do
-    Process.kill( :QUIT, pid ) && Process.wait
+    Process.kill(:QUIT, pid) && Process.wait
     switch = false
   end
   while switch do sleep 1 end
 end
 
-# Command to build static deck to destination (as an Array).
+# Command to build static site to destination (as an Array).
 def build_site_command(destination=nil)
+  staging_config_file = '_config.staging.yml'
   args = []
   args.concat ['--destination', destination] unless destination.nil?
 
-  if File.exists? '_config.staging.yml'
-    args.concat ['--config', '_config.yml,_config.staging.yml']
+  if File.exists? staging_config_file
+    args.concat ['--config', "_config.yml,#{staging_config_file}"]
   end
 
   ['bundle', 'exec', 'jekyll', 'build', *args]
 end
 
+# Clean modifications from the staging environment.
+def clean_staging
+  staging_config_file = '_config.staging.yml'
+  File.delete staging_config_file if File.exists? staging_config_file
+end
+
+# Set `rake build` as default task.
+task default: [:build]
+
+# rake travis
+desc 'Generate site from Travis CI and publish site to GitHub Pages'
+task travis: [:staging_env, :travis_env, :publish]
+
 # rake build
 desc 'Generate the deck'
-task :build do
+task build: [:staging_env] do
+  clean_staging if ENV['STAGING_URL'].to_s.empty?
   sh(*build_site_command)
+  clean_staging
 end
 
 # rake static
@@ -95,15 +106,20 @@ end
 # rake deploy
 desc 'Deploy the site using rsync'
 task deploy: [:build] do
-  fail 'Error: must add :depoly: section to _config.yml.' if config[:deploy].nil?
+  fail 'Error: must add :depoly: section to _config.yml.' if config['deploy'].nil?
 
+  # Load or set destination.
+  destination = File.join(
+    config[:destination] ? config[:destination] : '_site', '/')
+
+  # Load deploy settings.
   local = File.expand_path destination
-  protocol = config[:deploy][:protocol]
-  server = config[:deploy][:server]
-  user = config[:deploy][:user]
-  port = config[:deploy][:port]
-  path = config[:deploy][:path]
-  upload_only = config[:deploy][:upload_only]
+  protocol = config['deploy']['protocol']
+  server = config['deploy']['server']
+  user = config['deploy']['user']
+  port = config['deploy']['port']
+  path = config['deploy']['path']
+  upload_only = config['deploy']['upload_only']
 
   case protocol
   when :rsync
@@ -114,17 +130,15 @@ task deploy: [:build] do
     end
 
     excludes = upload_only.nil? ? [] : upload_only.collect { |e| "--exclude='#{e}'" }
-
     rsync = ['rsync', *flags, '--del', *excludes,
               "#{local}/", "#{user}@#{server}:#{path}"].join(' ')
-
-    p "Now running: #{rsync}"
     sh rsync
 
     if upload_only
-      rsync_uploads = ['rsync', *flags,
-                        "#{local}/", "#{user}@#{server}:#{path}"].join(' ')
-      p "Now running: #{rsync_uploads}"
+      rsync_uploads = [
+        'rsync', *flags,
+        "#{local}/", "#{user}@#{server}:#{path}"
+      ].join(' ')
       sh rsync_uploads
     end
   end
@@ -133,49 +147,49 @@ end
 # rake publish
 Rake::Jekyll::GitDeployTask.new(:publish) do |t|
   t.description = 'Generate the site and push changes to remote repository'
-  t.author_date = -> { '' }
-
-  t.remote_url = -> {
-    %x(git config remote.origin.url)
-    .gsub(%r{^git://}, 'git@')
-    .sub(%r{/}, ':').strip
-  }
-
-  t.deploy_branch = -> {
-    t.remote_url.match(/github\.io\.git$/) ? 'master' : 'gh-pages'
-  }
 
   t.jekyll_build = -> (dest_dir) {
     Rake.sh(*build_site_command(dest_dir))
-  }
-
-  t.skip_commit = -> {
-    ENV['TRAVIS_PULL_REQUEST'].to_i > 0 ||
-      %w[yes y true 1].include?(ENV['SKIP_COMMIT'].to_s.downcase) ||
-      (!ENV['SOURCE_BRANCH'].nil? && ENV['SOURCE_BRANCH'] != ENV['TRAVIS_BRANCH'])
   }
 end
 
 # rake travis_env
 desc 'Prepare the Travis CI build environment'
 task :travis_env do
-  # Generate a staging config if staging URL is set.
-  url = ENV['JEKYLL_STAGING_URL'].to_s
-  unless url.empty?
-    puts 'Creating _config.staging.yml.'
-    staging = {'domain' => url, 'baseurl' => url,
-               'assets' => {'baseurl' => "#{url}/assets"}}
-    File.open('_config.staging.yml','w') { |f| f.write staging.to_yaml }
+  next if ENV['SKIP_DEPLOY'].to_s == 'true' && ENV['REQUIRE_KEY'].to_s != 'true'
+
+  deploy_key = ENV['DEPLOY_KEY'].to_s
+  .split('[NL]').join("\n").gsub('[SP]', ' ')
+  unless deploy_key.empty?
+    File.open('.deploy_key', 'w') { |f| f.write deploy_key }
   end
 
-  # Setup the deploy key.
-  puts 'Adding deploy key.'
-  verbose false do
+  if File.exists? '.deploy_key'
     sh 'chmod 600 .deploy_key'
+  end
+
+  unless deploy_key.empty?
     sh 'ssh-add .deploy_key'
   end
 end
 
-# rake travis
-desc 'Generate site from Travis CI and publish site to GitHub Pages'
-task travis: [:travis_env, :publish]
+# rake staging_env
+desc 'Prepare the staging environment'
+task :staging_env do
+  url = ENV['STAGING_URL'].to_s
+  next if url.empty?
+
+  staging_config = {
+    'domain' => url, 'baseurl' => url,
+    'assets' => {'baseurl' => "#{url}/assets"}
+  }
+
+  File.open(staging_config_file, 'w') { |f| f.write staging_config.to_yaml }
+
+  cname = ENV['CNAME'].to_s
+  if cname == 'false'
+    File.delete('CNAME') if File.exists?('CNAME')
+  elsif !cname.empty?
+    File.open('CNAME', 'w') { |f| f.write cname }
+  end
+end
