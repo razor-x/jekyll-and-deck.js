@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 2.0.0
 
 - New material theme: a clean responsive style to help bootstrap your deck.
 - Travis CI deployment now uses deploy keys instead of personal access tokens.
