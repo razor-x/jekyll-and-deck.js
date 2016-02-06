@@ -3,3 +3,13 @@ layout: deck
 ---
 
 {% assign deck = site.data.deck %}
+
+{% slide %}
+<h2>Built with this!</h2>
+
+<ul>
+  {% for deck in site.data.deck.decks %}
+    <li><a href="{{ deck.url }}">{{ deck.title }}</a></li>
+  {% endfor %}
+</ul>
+{% endslide %}

@@ -30,3 +30,11 @@ short_url: goo.gl/vb3c48
 # logos:
 #  - name: github
 #    url: https://github.com/
+
+decks:
+  - title: UCR Oral Qualifying Exam by Evan Sosenko
+    url: https://io.evansosenko.com/deck-ucr-exam/
+  - title: Superconducting phases of monolayer transition-metal dichalcogenides
+    url: https://evansosenko.com/deck-dichalcogenides-superconductivity/
+  - title: Effect of contacts on spin lifetime measurements in graphene
+    url: https://evansosenko.com/deck-spin-lifetime/
